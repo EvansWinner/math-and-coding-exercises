@@ -1,3 +1,5 @@
+* Exercises
+
 Note: There is very little here yet
 
 This is a record of my progress toward my goal of teaching myself the
