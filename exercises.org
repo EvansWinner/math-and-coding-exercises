@@ -1,0 +1,1015 @@
+#+Title: Exercises in Mathematics, Algorithmics and Computer Programming
+#+AUTHOR: Evans Winner
+#+OPTIONS: tex:verbatim 
+#+OPTIONS: tex:t
+#+LaTeX_CLASS: article
+
+* Introduction
+
+First, this is the Emacs Lisp that is required in order to export the
+org-mode buffer of this file to PDF:
+
+#+begin_src emacs-lisp
+(require 'org-install)
+(require 'ob-tangle)
+(require 'ob-shen)
+(require 'ox-latex)
+(require 'ob-scheme)
+(setq org-latex-pdf-process '("lualatex %f"))
+(setq org-src-fontify-natively t)
+(setq org-latex-listings nil) ; doesn’t work because the LaTeX
+                              ; ‘listings’ package doesn’t have
+                              ; a shen backend.
+
+(setq org-latex-default-packages-alist
+      '(
+       ("" "amsmath" t)
+       ("" "amsthm" t)
+       ("T1" "fontenc" t)
+       ("" "fixltx2e" nil)
+       ("" "graphicx" t)
+       ("" "longtable" nil)
+       ("" "float" nil)
+       ("" "wrapfig" nil)
+       ("normalem" "ulem" t)
+       ("" "textcomp" t)
+       ("" "marvosym" t)
+       ("" "wasysym" t)
+       ("" "latexsym" t)
+       ("" "amssymb" t)
+       ("" "amstext" nil)
+       ("" "hyperref" nil)
+       ("" "fontspec" t)
+       ("" "tabularx" t)
+       ("" "enumerate" t)
+       ("utf8x" "luainputenc" t)
+       ("" "unicode-math" t0)
+       "\\setmathfont{Latin Modern Math}"
+       "\\setmathfont{STIXGeneral}"
+       "\\tolerance=1000"))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scheme . t)
+   (emacs-lisp . t)
+   ))
+#+end_src
+
+#+RESULTS:
+| (scheme . t) | (emacs-lisp . t) |
+
+This is a record of my progress toward my goal of teaching myself the
+rudiments of mathematics, algorithmics and something of computer
+programming.  Having completed only the first year of high-school
+Algebra and two college courses in basic symbolic logic, I intend to
+learn a) basic “pre-calculus” and trigonometry, the equivalent of a
+first-year college course in the integral and differential calculous,
+the basics of symbolic and mathematical logic, the basics of discrete
+mathematics (graphs, matrix algebra, categories) and the basics of
+algorithmics, data structures and programming language semantics
+(type theory, et cetera).
+
+To this end, here follow worked exercises from whatsoever books on the
+subjects I find and take the time to work.  I further take this
+opportunity to improve my command of \LaTeX\ math markup, GNU Emacs,
+org-mode and related tools.
+
+* The C Programming Language, The; Kernighan and Ritchie
+** 1.4
+
+#+begin_src c
+#include <stdio.h>
+
+/* Print a table of Celcius to Fahrenheit temperatures. */
+main() {
+  printf("  F\t  C\n------------\n");
+  ftoc();
+  printf("\n");
+  printf("  C\t  F\n------------\n");
+  ctof();
+}
+
+ftoc() {
+  int fahrenheit;
+  for (fahrenheit = 0; fahrenheit <= 300; fahrenheit = fahrenheit + 20)
+    printf("%3d %6.1f\n", fahrenheit, (5.0/9.0) * (fahrenheit - 32.0));
+}
+ 
+ctof() {
+  int celcius;
+  for (celcius = 0; celcius <= 300; celcius = celcius + 20)
+    printf("%3d %6.1f\n", celcius, (celcius + 160) / 5.0);
+}
+#+end_src 
+
+** 1.7
+
+#+begin_src c
+#include <stdio.h>
+
+main() {
+  int foo = getchar() != EOF;
+  printf("%d", foo);
+}
+#+end_src 
+
+** 1.8
+
+#+begin_src c
+#include <stdio.h>
+
+main() {
+  double nl = 0;
+  double c;
+  while ((c =getchar()) != EOF)
+    if (c == '\n' || c == '\t' || c == ' ')
+      ++nl;
+  printf("%.0f\n", nl);
+}
+#+end_src 
+
+** 1.9
+
+#+begin_src c
+#include <stdio.h>
+
+main() {
+  int c, holder, running = 0;
+  while ((c = getchar()) != EOF) {
+    if (c != ' ') {
+      putchar(c);
+      running = 0; 
+    }
+    if ((c == ' ')  && (running == 0)) {
+      putchar('\n');
+      running = 1; 
+    }
+  }
+}
+#+end_src 
+
+** 1.10
+
+#+begin_src c
+#include <stdio.h>
+
+main() {
+  int c;
+  
+  while ((c = getchar()) != EOF) {
+    if (!(c == '\t' || c == '\b' || c == '\\'))
+      putchar(c);
+    if (c == '\t')
+      printf("\\t");
+    if (c == '\b')
+      printf("\\b");
+    if (c == '\\')
+      printf("\\\\");
+  }
+}
+#+end_src
+
+** 1.12
+
+#+begin_src c
+#include <stdio.h>
+
+main() {
+  int c, running = 0;
+  while ((c = getchar()) != EOF) {
+    if ((c != '\n') && (c != ' ')) {
+      putchar(c);
+      running = 0; 
+    }
+    else if (((c == ' ') || (c == '\n')) && (running == 0)) {
+      putchar('\n');
+      running = 1; 
+    }
+  }
+}
+#+end_src 
+
+** 1.13
+
+#+begin_src c
+
+#include <stdio.h>
+
+#define IN 1
+#define OUT 0
+#define MAX_WORD_LENGTH 20
+
+void make_it(int n) {
+  int i;
+  if (n > 50) n = 50;
+  for (i = 0; i < n; ++i)
+    printf("*");
+  return;
+}
+
+main() {
+  int c, i, last = OUT, count = 0;
+  int words[MAX_WORD_LENGTH];		/* histogram array */
+  for (i = 0; i < MAX_WORD_LENGTH; ++i)	/* initialize it */
+    words[i] = 0;
+  /* Populate the array */
+  while ((c = getchar()) != EOF) {
+    if ((c == ' ') || (c == '\t') || (c == '\n')) {
+      if (last == IN)
+	if (count <= MAX_WORD_LENGTH) words[count] = ++words[count];
+        else words[MAX_WORD_LENGTH - 1] = ++words[MAX_WORD_LENGTH - 1];
+      count = 0;
+    }
+    else {
+      last = IN;
+      count = ++count;
+    }
+  }
+
+  if (last == IN)
+    if (count <= MAX_WORD_LENGTH) words[count] = ++words[count];
+    else words[MAX_WORD_LENGTH - 1] = ++words[MAX_WORD_LENGTH - 1];
+
+  /* write the histogram */
+  printf("\n    -- NUMBER OF WORDS OF GIVEN LENGTH IN INPUT FILE (MAX 50) --\n");
+  printf("                          |10       |20       |30       |40       |>50\n");
+  for (i = 0; i < MAX_WORD_LENGTH; ++i) {
+    if (i == (MAX_WORD_LENGTH - 1)) printf(">=");
+    else printf("  ");
+    /* if (i < MAX_WORD_LENGTH) printf(" "); */
+    if (i < 9) printf(" ");
+    printf("%d ", i + 1);
+    printf("character");
+    if (i == 0) printf(":  ");
+    else printf("s: ");
+    /* do it */
+    make_it(words[i]);
+    printf("\n");
+  }
+  /* debugging */
+  /* for (i = 0; i < MAX_WORD_LENGTH; ++i) printf("idx %d\t=\t%d\t\n", i, words[i]); */
+  return 0;
+}
+#+end_src 
+
+* Discrete Mathematics and its Applications; Rosen
+
+Apropos of Chapter one, Example 13, bitwise operations defined on
+lists in Shen:
+
+#+begin_src shen
+(define bw-or
+  0 0 -> 0
+  _ _ -> 1)
+(define bw-and
+  1 1 -> 1
+  _ _ -> 0)
+(define bw-xor
+  X X -> 1
+  _ _ -> 0)
+(define bw-nor
+  0 0 -> 1
+  _ _ -> 0)
+(define bw-nand
+  1 1 -> 0
+  _ _ -> 1)
+
+(define bitwise
+  F [] [] -> []
+  F X Y -> (cons
+	    ((function F) (hd X) (hd Y))
+	    (bitwise F (tl X) (tl Y))))
+#+end_src
+
+Using this, we can execute the following code in the interpreter:
+
+=(bitwise bw-or [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[1 1 1 0 1 1 1 1 1 1]=
+
+=(bitwise bw-and [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[0 1 0 0 0 1 0 1 0 0]=
+
+=(bitwise bw-xor [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[0 1 0 1 0 1 0 1 0 0]=
+
+* Discrete Mathematcis Demystified; Krantz
+** “You Try It” (pg 6)
+
+A truth table for “The number $x$ is positive ($p$) and is a perfect
+square ($q$).”
+
+\begin{tabular}{l|c|r}
+$p$ & $q$ & $p\land q$ \\
+\hline
+$T$ & $T$ & $T$ \\
+$T$ & $F$ & $F$ \\
+$F$ & $T$ & $F$ \\
+$F$ & $F$ & $F$ \\
+\end{tabular}
+
+** Chapter 1, exercises
+ \begin{enumerate}
+ \item 
+ \begin{tabular}{l|l|l|l|l|l}
+ $S$ & $T$ & $(S\land T)$ & $(S\vee T)$ & $\neg (S\vee T)$ & $(S\land T) \vee \neg (S\vee T)$ \\ 
+ \hline
+ $T$ & $T$ & $T$ & $T$ & $F$ & $T$ \\
+ $T$ & $F$ & $F$ & $T$ & $F$ & $T$ \\
+ $F$ & $T$ & $F$ & $T$ & $F$ & $T$ \\
+ $F$ & $F$ & $F$ & $F$ & $T$ & $T$ \\
+ \end{tabular}
+ 
+
+ \end{enumerate}
+
+* First Year Calculus; Dougherty
+
+
+  1. 
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item ¬$P:$ $F$ when $P$ is $T$.
+  \item $P∧Q:$ $F$ when either $P$ is $F$ or $Q$ is $F$ or both are $F$.
+  \item $P∨Q:$ $F$ when both $P$ and $Q$ are $F$.
+  \item $P$→$Q:$ $F$ when both $P$ is $F$ and $Q$ is $T$.
+  \item $P↔Q:$ $F$ when $P$ and $Q$ have differing truth values.
+  \item $P$→(¬$Q):$ $F$ when both $P$ and $Q$ are $T$.
+  \end{enumerate}
+#+END_LaTeX
+  2.
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item
+    \begin{tabular}{l||l}
+      $P$&¬$P$\\
+      \hline
+      $T$&$F$\\
+      $F$&$T$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P∧Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$F$\\
+      $F$&$T$&$F$\\
+      $F$&$F$&$F$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P∨Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$T$\\
+      $F$&$T$&$T$\\
+      $F$&$F$&$F$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P$→$Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$F$\\
+      $F$&$T$&$T$\\
+      $F$&$F$&$T$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P↔Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$F$\\
+      $F$&$T$&$F$\\
+      $F$&$F$&$T$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l|l}
+      $P$&$Q$&¬$Q⇔α$&$P$→$α$\\
+      \hline
+      $T$&$T$&$F$&$F$\\
+      $T$&$F$&$T$&$T$\\
+      $F$&$T$&$F$&$T$\\
+      $F$&$F$&$T$&$T$
+    \end{tabular}
+  \end{enumerate}
+#+END_LaTeX
+  3. (¬$Q)$→$($¬$P)$ is
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item $F$ when $P$ is $T$ and $Q$ is $F$.
+  \item $P$→$Q$ is $F$ when $P$ is $T$ and $Q$ is $F$.
+  \item They therefore do mean the same thing.
+  \item The truth tables confirm that $P$→$Q⇔$¬$Q$→¬$P:$\\
+    \begin{tabular}{l|l||l||l|l|l}
+      $P$&$Q$&$P$→$Q$&¬$Q$&¬$P$&¬$Q$→¬$P$\\
+      \hline
+      $T$&$T$&$T$&$F$&$F$&$T$\\
+      $T$&$F$&$F$&$T$&$F$&$F$\\
+      $F$&$T$&$T$&$F$&$T$&$T$\\
+      $F$&$F$&$T$&$T$&$T$&$T$
+    \end{tabular}
+  \end{enumerate}
+#+END_LaTeX
+  4. Definition of \textsc{xor} ($⊻$)~:\\
+#+BEGIN_LaTeX
+  \begin{tabular}{l|l||l}
+    $P$&$Q$&$P⊻Q$\\
+    \hline
+    $T$&$T$&$F$\\
+    $T$&$F$&$T$\\
+    $F$&$T$&$T$\\
+    $F$&$F$&$F$
+  \end{tabular}
+#+END_LaTeX
+  5. $P⊻Q⇔$¬$(P↔Q):$\\
+#+BEGIN_LaTeX
+  \begin{tabular}{l|l||l|l}
+    $P$&$Q$&$P↔Q$&¬$(P↔Q)$\\
+    \hline
+    $T$&$T$&$T$&$F$\\
+    $T$&$F$&$F$&$T$\\
+    $F$&$T$&$F$&$T$\\
+    $F$&$F$&$T$&$F$
+  \end{tabular}
+#+END_LaTeX
+  6.
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item ¬$P↔$¬$Q:$\\
+    \begin{tabular}{l|l||l|l|l}
+      $P$&$Q$&¬$P$&¬$Q$&¬$P↔$¬$Q$\\
+      \hline 
+      $T$&$T$&$F$&$F$&$T$\\
+      $T$&$F$&$F$&$T$&$F$\\
+      $F$&$T$&$T$&$F$&$F$\\
+      $F$&$F$&$T$&$T$&$T$
+    \end{tabular}
+  \item $(P∨$¬$Q)$→$P:$\\
+    \begin{tabular}{l|l||l|l|l}
+      $P$&$Q$&¬$Q⇔α$&$P∨α⇔β$&$β$→$P$\\
+      \hline 
+      $T$&$T$&$F$&$T$&$T$\\
+      $T$&$F$&$T$&$T$&$T$\\
+      $F$&$T$&$F$&$F$&$T$\\
+      $F$&$F$&$T$&$T$&$F$
+    \end{tabular}
+  \item ¬$[P∧(Q∨R)]:$\\
+    \begin{tabular}{l|l||l|l|l|l}
+      $P$&$Q$&$R$&$Q∨R⇔α$&$P∧α⇔β$&¬$β$\\
+      \hline 
+      $T$&$T$&$T$&$T$&$T$&$F$\\
+      $T$&$T$&$F$&$T$&$T$&$F$\\
+      $T$&$F$&$T$&$T$&$T$&$F$\\
+      $T$&$F$&$F$&$F$&$F$&$T$\\
+      $F$&$T$&$T$&$T$&$F$&$T$\\
+      $F$&$T$&$F$&$T$&$F$&$T$\\
+      $F$&$F$&$T$&$T$&$F$&$T$\\
+      $F$&$F$&$F$&$F$&$F$&$T$
+    \end{tabular}
+  \end{enumerate}
+#+END_LaTeX
+  7.
+     1.
+  8. Lexicographic order for statements $P,Q,R,S:$\\
+#+BEGIN_LaTeX
+  \begin{tabular}{l|l|l|l}
+    $P$&$Q$&$R$&$S$\\
+    \hline 
+    $T$&$T$&$T$&$T$\\
+    $T$&$T$&$T$&$F$\\
+    $T$&$T$&$F$&$T$\\
+    $T$&$T$&$F$&$F$\\
+    $T$&$F$&$T$&$T$\\
+    $T$&$F$&$T$&$F$\\
+    $T$&$F$&$F$&$T$\\
+    $T$&$F$&$F$&$F$\\
+    $F$&$T$&$T$&$T$\\
+    $F$&$T$&$T$&$F$\\
+    $F$&$T$&$F$&$T$\\
+    $F$&$T$&$F$&$F$\\
+    $F$&$F$&$T$&$T$\\
+    $F$&$F$&$T$&$F$\\
+    $F$&$F$&$F$&$T$\\
+    $F$&$F$&$F$&$F$
+  \end{tabular}
+#+END_LaTeX
+
+* Functional Programming in Qi; Tarver
+Exercises from the book, Functional Programming in Qi, written in
+Shen.
+
+#+begin_src shen
+(tc -)
+#+end_src
+
+** 2.3
+
+#+begin_src shen
+(define cent->fahr
+  {number --> number}
+  C -> (+ (* C (/ 9 5.0)) 32))
+
+(define fahr->cent 
+  F -> (* (- F 32) (/ 5 9.0)))
+#+end_src
+
+** 2.4 
+
+#+begin_src shen
+(define and-gate
+  1 1 -> 1
+  _ _ -> 0)
+
+(define or-gate
+  0 0 -> 0
+  _ _ -> 1)
+
+(define inverter
+  0 -> 1
+  _ -> 0)
+#+end_src
+
+** 2.5
+
+#+begin_src shen
+(define circuit
+  X Y ->
+  (and-gate 
+   (inverter (and-gate X Y))
+   (inverter (or-gate X Y))))
+
+\* The optimized version.  Basically, it's a nor gate. *\
+(define nor-gate
+  0 0 -> 1
+  _ _ -> 0)
+#+end_src
+
+** 2.6
+
+#+begin_src shen
+(define neuron
+  I1 W1 I2 W2 K ->
+  (if (< K
+	 (+ (* I1 W1) (* I2 W2)))
+      0
+      1))
+#+end_src
+
+** 2.7 
+
+#+begin_src shen
+\* T = time spent traveling; V = fraction of speed of light, therefore 0 < V < 1 *\
+(define time-dilation
+  T V -> (/ T (sqrt (- 1 (expt V 2)))))
+#+end_src
+
+** 2.8 Neglecting air resistance...
+
+#+begin_src shen
+  \* T = time falling in seconds *\
+(define distance-fallen
+  T -> (* .5 30 T T))
+#+end_src
+
+** 2.9
+
+#+begin_src shen
+(define seconds-to-distance
+  D V -> (/ (ly->miles D) (mph->mps V)))
+
+  \* Convert light-years to miles *\
+(define ly->miles
+  Ly -> (* 186282 3600 24 365.25)) \* could look up a more exact *\
+				    \* constant *\
+
+(define mph->mps
+  Mph -> (/ Mph 3600.0))
+
+\* (define format-seconds-to-distance *\
+\*   D=Distance in light-years; V=speed in miles-per-hour *\
+\*   D V ->  *\
+\*   (output "~A weeks, ~A days, ~A hours and ~A minutes." *\
+\* 	  (mod seconds-to-distance  *\
+#+end_src
+
+* Gentle Introduction to Symbolic Computation; Touretzsky
+All the exercises before 4.15 are lost and gone forever...
+
+** 4.15
+#+begin_src lisp
+(defun geq (n m)
+  "T if n is greater than or equal to m."
+  (>= n m))				;Cheating?  Hey, they made the
+					;rules.
+#+end_src
+
+** 4.16
+
+#+begin_src lisp
+;; Wite a fun that squares n if odd and pos, doubles it if odd ad neg,
+;; else divides by 2
+(defun arbitrary (n)
+  (if (oddp n)
+      (if (> n 0)
+	  (* n n)
+	  (* n 2))
+      (/ n 2)))
+#+end_src
+
+** 4.17 
+
+t if first arg is 'boy or 'girl and second 'child or man/woman adult
+
+#+begin_src lisp
+(defun consistentp (sex age)
+  (or 
+   (and 
+    (or (eql sex 'boy) (eql sex 'girl))
+    (eql age 'child))
+   (and 
+    (or (eql sex 'man) (eql sex 'woman))
+    (eql age 'adult))))
+#+end_src
+
+** 4.18 rock/paper/scissors
+#+begin_src lisp
+;; This would be easier in shen...
+;; (define rock-paper-scissors
+;;     rock paper -> player-2-wins
+;;     rock scissors -> player-1-wins
+;;     paper rock -> player-1-wins
+;;     paper scissors -> player-2-wins
+;;     scissors paper -> player-1-wins
+;;     scissors rock -> player-2-wins
+;;     X X -> tie
+;;     _ _ -> invalid-input)
+(defun rock-paper-scissors (player1 player2)
+  (cond ((and (eql player1 'rock)     (eql player2 'paper))    'player-2-wins)
+	((and (eql player1 'rock)     (eql player2 'scissors)) 'player-1-wins)
+	((and (eql player1 'paper)    (eql player2 'rock))     'player-1-wins)
+	((and (eql player1 'paper)    (eql player2 'scissors)) 'player-2-wins)
+	((and (eql player1 'scissors) (eql player2 'rock))     'player-2-wins)
+	((and (eql player1 'scissors) (eql player2 'paper))    'player-1-wins)
+	((or (and (eql player1 'rock)
+		  (eql player2 'rock))
+	     (and (eql player1 'paper)
+		  (eql player2 'paper))
+	     (and (eql player1 'scissors)
+		  (eql player2 'scissors))) 'tie)
+	(t 'invalid-input)))
+#+end_src
+
+** 4.19
+#+begin_src lisp
+;; Show how to write (and w x y z) using cond, and then using nested ifs)
+;; (cond ((not w) nil)
+;;       ((not x) nil)
+;;       ((not y) nil)
+;;       ((not z) nil)
+;;       (t t))
+;; (if w (if x (if y (if z t nil))))
+#+end_src
+
+** 4.20
+
+I don't remember what "compare" was, so skipping this one.
+
+** 4.21 gtest.  One version using ifs, the other cond. T if the first
+#+begin_src lisp
+;; is greater than second, OR either is zero.
+(defun gtest (n m)
+  (if (> n m)
+      (if (not (zerop n))
+	(if (not (zerop m))
+	  t
+	  nil))))
+
+(defun gtest (n m)
+  (cond ((zerop n) nil)
+	((zerop m) nil)
+	((>= m n) nil)
+	(t t)))
+#+end_src
+
+** 4.22
+
+#+begin_src lisp
+;; Again, three versions.  The semantics are actually different
+;; in that the second two don't actually check whether they get valid
+;; input.
+(defun boilingp (n scale)
+  (or 
+   (and (eql scale 'c) (> n 100))
+   (and (eql scale 'f) (> n 212))))
+
+(defun boiligp (n scale)
+  (if (eql scale 'f)
+      (if (> n 212)
+	  t)
+      (if (> n 100)
+	  t)))
+
+(defun boilingp (n scale)
+  (cond ((eql scale 'c) (> n 100))
+	(t (> n 212))))
+#+end_src
+
+**  4.23
+
+I think in general one needs one more cond clause than nested if or
+and.  But who the hell cares?
+
+** 4.24
+Because you want to, like, made decisions in your code, dude.
+** 4.25 
+It executes the second input if the first evaluates to t, otherwise it just does nothing.
+** 4.26 
+Because the ifs can be nested withing one another(cond)
+** 4.27 
+=nil=
+** 4.28 
+I was not smart enough to figure this one out without looking
+up the anser.  I figured out why it wasn't working, but not how to  fix it.
+
+** 4.29
+
+#+begin_src lisp
+(defun logical-and (x y)
+  (cond ((and x y) t)
+	(t nil)))
+
+(defun logical-and (x y)
+  (if x
+      (if y t nil)
+      nil))
+
+(defun logical-or (x y)
+  (and (or x y) t))
+#+end_src
+
+** 4.31 
+
+Not is not a conditional and it is boolean and there is no need for a
+separate function
+
+** 4.32
+ | x   | y   | (logical-or x y) |
+ |-----+-----+------------------|
+ | T   | T   | T                |
+ | T   | NIL | T                |
+ | NIL | T   | T                |
+ | NIL | NIL | NIL              |
+
+** 4.33
+2
+
+** 4.34
+  | x   | (if x t nil) |
+  |-----+--------------|
+  | T   | T            |
+  | NIL | NIL          |
+
+Based on the question, this is the answer.  The book has a three-place
+truth-table, but if its only outputs are t and nil, then y is and z is
+nil, which means the only variable input is x, which has only 2 truth
+values.  I think the quetions is not well-posed.
+
+** 4.35
+
+#+begin_src lisp
+(defun three-place-demorgans-and (x y z)
+  (not (or (not x) (not y) (not z))))
+
+(defun three-place-demorgans-or (x y z)
+  (not (and (not x) (not y) (not z))))
+#+end_src
+
+** 4.36
+ | x   | y   | (nand x y) |
+ |-----+-----+------------|
+ | T   | T   | NIL        |
+ | T   | NIL | T          |
+ | NIL | T   | T          |
+ | NIL | NIL | T          |
+
+** 4.37 
+#+begin_src lisp
+(defun nand (x y)
+  (not (and x y)))
+(defun nand-and (x y)
+  (nand (nand x y) (nand x y)))
+(defun nand-not (x)
+  (nand x x))
+(defun nand-or (x y)
+  (nand-not (nand-and (nand-not x) (nand-not y))))
+#+end_src
+
+** 4.38
+
+#+begin_src lisp
+(defun nor (x y)
+  (and (not x) (not y)))
+(defun nor-not (x)
+  (nor x x))
+(defun nor-or (x y)
+  (nor-not (nor x y)))
+(defun nor-and (x y)
+  (nor (nor-not x)
+       (nor-not y)))
+#+end_src
+
+;; 4.39
+Not going to do it.
+
+* Elementary Calculus: An Infinitesimal Approach; Keisler
+
+#+BEGIN_LaTeX
+\begin{enumerate}
+\item The distance $D$ between points $P(2,9)$ and $Q(-1,13)$, given
+  $(Δx)²+(Δy)² = D²: (x₂ - x₁)² + (y₂ - y₁)² = D².$
+  Substituting:—
+  \begin{equation}{}
+    \begin{split}
+      D² &= (-3)² + 4² \\
+      &= 9 + 16 \\
+      &= 25; ⟹ \\
+      D &= \sqrt{25} \\
+      &= 5.
+    \end{split}
+    \end{equation}
+  \item Similarly, for $P(1,-2),Q(2,10): D² = (2 - 1)² + [10 - (-2)]²
+    = 1² + 12² = D² ⟹ \sqrt{145} = \sqrt{D²} ⟹ D = \sqrt{145}.$
+    
+  \item For $P(0,0),Q(-2,-3): Δx = 2; Δy = 3$; therefore $4 + 9 = D²$, and $D =
+    \sqrt{13}.$
+  \item For $P(-1,-1), Q(4,4): Δx = 5; Δy = 5; (Δx)² + (Δy)² ≡ 5² + 5² = 25 + 25 = 50 ⟹ D² = 50 ⟹ D = 5\sqrt{2}$.
+  \item For $P(6,1), Q(-7,1): \sqrt{[(-7) - 6]² + 0²} = \sqrt{D²}$,
+    thus $\sqrt{169 + 0} = \sqrt{D²}$, thus $D = \sqrt{169} = 13$ .
+  \item For $P(5,10), Q(9,10): Δx = 4, Δy = 0; D = 4.$
+\end{enumerate}
+#+END_LaTeX
+
+* Starting Forth; Brodie
+
+** 1.1
+
+#+BEGIN_src forth
+: gift ." land war in Asia! " ;
+: giver ." Alexander T. Great" ;
+: thanks cr ." Dear " giver ." ," cr ." thanks for the " gift ." ." ;
+#+END_src
+
+** 1.2
+#+BEGIN_SRC forth
+: ten-less -10 + ;
+#+END_src
+
+** 1.3
+
+#+BEGIN_SRC forth
+: giver ." Tamerlane" ;
+\ I guess because whe you define "thanks" it compiles it along with
+\ all the words it calls into a single execuable blob, so redefining a
+\ word it calls does't recompile the version of that word that was
+\ compiled into "thanks."
+#+END_src
+
+** 2 quiz 2-a
+
+#+BEGIN_SRC forth
+: a 1 ;
+: b 2 ;
+: c 3 ;
+: n 4 ;
+: x 5 ;
+#+END_src
+
+** 1
+
+#+BEGIN_SRC forth
+a b + c *
+#+END_src
+
+** 2
+
+#+BEGIN_SRC forth
+3 a * b - c 4 + /
+#+END_src
+
+** 3
+
+#+BEGIN_SRC forth
+a b 0.5 * * 100 /
+#+END_src
+
+** 4
+
+#+BEGIN_SRC forth
+n 1 + n /
+#+END_src
+
+**  5
+
+#+BEGIN_SRC forth
+7 x * 5 + * x
+#+END_src
+
+** 6
+
+#+BEGIN_SRC forth
+ => (b-a)/(b+a)
+#+END_src
+
+** 7 
+
+#+BEGIN_SRC forth
+=> 10b/a
+#+END_src
+* Structure and Interpretation of Computer Programs; Ableson and Sussman
+First, I have lost whatever exercises were done before number 1.11.
+
+Second, I will be using Racket scheme, and have found it useful to
+turn on the trace functionality:
+
+#+BEGIN_SRC scheme
+(require racket/trace)
+#+END_SRC 
+
+** 1.11
+
+#+begin_src scheme
+;; A function f is defined by the rule that f(n) = n if n<3 and f(n) =
+;; f(n - 1) + 2f(n - 2) + 3f(n - 3) if n> 3. Write a procedure that
+;; computes f by means of a recursive process. [already done] Write a
+;; procedure that computes f by means of an iterative process.
+
+(define (f n)
+  (if (< n 3) n
+      (f-iter n 2 1 0 3)))
+
+(define (ppf-iter n a b c count)
+  (if (= count (+ n 1))
+      a
+      (f-iter n (+ a
+                   (* 2 b)
+                   (* 3 c))
+              a b (+ count 1))))
+#+end_src
+
+** 1.12
+
+#+begin_src scheme
+;; The following pattern of numbers is called Pascal's triangle.
+
+;;     1
+;;    1 1
+;;   1 2 1
+;;  1 3 3 1
+;; 1 4 6 4 1
+;;    ...
+
+;; The numbers at the edge of the triangle are all 1, and each number
+;; inside the triangle is the sum of the two numbers above it.  Write
+;; a procedure that computes elements of Pascal's triangle by means of
+;; a recursive process.
+
+(define (pascal row pos)
+  (cond ((or
+         (= pos 1)
+         (= pos row)) 1)
+        ((or
+          (= pos 0)
+          (> pos row)) 0)
+        (else (+ (pascal (- row 1) (- pos 1))
+              (pascal (- row 1) pos)))))
+#+end_src
+
+** 1.13
+
+#+begin_src scheme
+;; Prove that Fib(n) is the closest integer to phi^n/(sqrt 5), where
+;; phi = (1 + sqrt(5))/2. Hint: Let psi = (1 - sqrt(5))/2. Use
+;; induction and the definition of the Fibonacci numbers (see Section
+;; 1.2.2) to prove that Fib(n) = (phi^n - psi^n)/sqrt(5).
+
+;; code of fib from the book....
+(define (fib n)
+  (cond ((= n 0) 0)
+        ((= n 1) 1)
+        (else (+ (fib (- n 1))
+                 (fib (- n 2)))))) 
+
+;; this is the hint they gave.
+(define psi (/ (- 1 (sqrt 5)) 2))
+(define phi (/ (+ 1 (sqrt 5)) 2))
+(define (hint n)
+   (/ (- (expt phi n)
+	(expt psi n))
+     (sqrt 5)))
+
+;; eg (hint 10) and (fib 10) are approximately equal (difference
+;; probably due to floating point round-off
+ [NOT COMPLETE] 
+#+end_src
