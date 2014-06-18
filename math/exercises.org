@@ -1,0 +1,333 @@
+#+Title: Exercises in Mathematics, Algorithmics and Computer Programming
+#+AUTHOR: Evans Winner
+#+OPTIONS: tex:verbatim 
+#+OPTIONS: tex:t
+#+LaTeX_CLASS: article
+
+* Introduction
+
+First, this is the Emacs Lisp that is required in order to export the
+org-mode buffer of this file to PDF:
+
+#+begin_src emacs-lisp
+(require 'org-install)
+(require 'ob-tangle)
+(require 'ob-shen)
+(require 'ox-latex)
+(require 'ob-scheme)
+(setq org-latex-pdf-process '("lualatex %f"))
+(setq org-src-fontify-natively t)
+(setq org-latex-listings nil) ; doesn’t work because the LaTeX
+                              ; ‘listings’ package doesn’t have
+                              ; a shen backend.
+
+(setq org-latex-default-packages-alist
+      '(
+       ("" "amsmath" t)
+       ("" "amsthm" t)
+       ("T1" "fontenc" t)
+       ("" "fixltx2e" nil)
+       ("" "graphicx" t)
+       ("" "longtable" nil)
+       ("" "float" nil)
+       ("" "wrapfig" nil)
+       ("normalem" "ulem" t)
+       ("" "textcomp" t)
+       ("" "marvosym" t)
+       ("" "wasysym" t)
+       ("" "latexsym" t)
+       ("" "amssymb" t)
+       ("" "amstext" nil)
+       ("" "hyperref" nil)
+       ("" "fontspec" t)
+       ("" "tabularx" t)
+       ("" "enumerate" t)
+       ("utf8x" "luainputenc" t)
+       ("" "unicode-math" t0)
+       "\\setmathfont{Latin Modern Math}"
+       "\\setmathfont{STIXGeneral}"
+       "\\tolerance=1000"))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scheme . t)
+   (emacs-lisp . t)
+   ))
+#+end_src
+
+#+RESULTS:
+| (scheme . t) | (emacs-lisp . t) |
+
+* Discrete Mathematics and its Applications; Rosen
+
+Apropos of Chapter one, Example 13, bitwise operations defined on
+lists in Shen:
+
+#+begin_src shen
+(define bw-or
+  0 0 -> 0
+  _ _ -> 1)
+(define bw-and
+  1 1 -> 1
+  _ _ -> 0)
+(define bw-xor
+  X X -> 1
+  _ _ -> 0)
+(define bw-nor
+  0 0 -> 1
+  _ _ -> 0)
+(define bw-nand
+  1 1 -> 0
+  _ _ -> 1)
+
+(define bitwise
+  F [] [] -> []
+  F X Y -> (cons
+	    ((function F) (hd X) (hd Y))
+	    (bitwise F (tl X) (tl Y))))
+#+end_src
+
+Using this, we can execute the following code in the interpreter:
+
+=(bitwise bw-or [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[1 1 1 0 1 1 1 1 1 1]=
+
+=(bitwise bw-and [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[0 1 0 0 0 1 0 1 0 0]=
+
+=(bitwise bw-xor [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[0 1 0 1 0 1 0 1 0 0]=
+
+* Discrete Mathematcis Demystified; Krantz
+** “You Try It” (pg 6)
+
+A truth table for “The number $x$ is positive ($p$) and is a perfect
+square ($q$).”
+
+\begin{tabular}{l|c|r}
+$p$ & $q$ & $p\land q$ \\
+\hline
+$T$ & $T$ & $T$ \\
+$T$ & $F$ & $F$ \\
+$F$ & $T$ & $F$ \\
+$F$ & $F$ & $F$ \\
+\end{tabular}
+
+** Chapter 1, exercises
+ \begin{enumerate}
+ \item 
+ \begin{tabular}{l|l|l|l|l|l}
+ $S$ & $T$ & $(S\land T)$ & $(S\vee T)$ & $\neg (S\vee T)$ & $(S\land T) \vee \neg (S\vee T)$ \\ 
+ \hline
+ $T$ & $T$ & $T$ & $T$ & $F$ & $T$ \\
+ $T$ & $F$ & $F$ & $T$ & $F$ & $T$ \\
+ $F$ & $T$ & $F$ & $T$ & $F$ & $T$ \\
+ $F$ & $F$ & $F$ & $F$ & $T$ & $T$ \\
+ \end{tabular}
+ 
+
+ \end{enumerate}
+
+* First Year Calculus; Dougherty
+
+
+  1. 
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item ¬$P:$ $F$ when $P$ is $T$.
+  \item $P∧Q:$ $F$ when either $P$ is $F$ or $Q$ is $F$ or both are $F$.
+  \item $P∨Q:$ $F$ when both $P$ and $Q$ are $F$.
+  \item $P$→$Q:$ $F$ when both $P$ is $F$ and $Q$ is $T$.
+  \item $P↔Q:$ $F$ when $P$ and $Q$ have differing truth values.
+  \item $P$→(¬$Q):$ $F$ when both $P$ and $Q$ are $T$.
+  \end{enumerate}
+#+END_LaTeX
+  2.
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item
+    \begin{tabular}{l||l}
+      $P$&¬$P$\\
+      \hline
+      $T$&$F$\\
+      $F$&$T$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P∧Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$F$\\
+      $F$&$T$&$F$\\
+      $F$&$F$&$F$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P∨Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$T$\\
+      $F$&$T$&$T$\\
+      $F$&$F$&$F$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P$→$Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$F$\\
+      $F$&$T$&$T$\\
+      $F$&$F$&$T$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l}
+      $P$&$Q$&$P↔Q$\\
+      \hline
+      $T$&$T$&$T$\\
+      $T$&$F$&$F$\\
+      $F$&$T$&$F$\\
+      $F$&$F$&$T$
+    \end{tabular}
+  \item 
+    \begin{tabular}{l|l||l|l}
+      $P$&$Q$&¬$Q⇔α$&$P$→$α$\\
+      \hline
+      $T$&$T$&$F$&$F$\\
+      $T$&$F$&$T$&$T$\\
+      $F$&$T$&$F$&$T$\\
+      $F$&$F$&$T$&$T$
+    \end{tabular}
+  \end{enumerate}
+#+END_LaTeX
+  3. (¬$Q)$→$($¬$P)$ is
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item $F$ when $P$ is $T$ and $Q$ is $F$.
+  \item $P$→$Q$ is $F$ when $P$ is $T$ and $Q$ is $F$.
+  \item They therefore do mean the same thing.
+  \item The truth tables confirm that $P$→$Q⇔$¬$Q$→¬$P:$\\
+    \begin{tabular}{l|l||l||l|l|l}
+      $P$&$Q$&$P$→$Q$&¬$Q$&¬$P$&¬$Q$→¬$P$\\
+      \hline
+      $T$&$T$&$T$&$F$&$F$&$T$\\
+      $T$&$F$&$F$&$T$&$F$&$F$\\
+      $F$&$T$&$T$&$F$&$T$&$T$\\
+      $F$&$F$&$T$&$T$&$T$&$T$
+    \end{tabular}
+  \end{enumerate}
+#+END_LaTeX
+  4. Definition of \textsc{xor} ($⊻$)~:\\
+#+BEGIN_LaTeX
+  \begin{tabular}{l|l||l}
+    $P$&$Q$&$P⊻Q$\\
+    \hline
+    $T$&$T$&$F$\\
+    $T$&$F$&$T$\\
+    $F$&$T$&$T$\\
+    $F$&$F$&$F$
+  \end{tabular}
+#+END_LaTeX
+  5. $P⊻Q⇔$¬$(P↔Q):$\\
+#+BEGIN_LaTeX
+  \begin{tabular}{l|l||l|l}
+    $P$&$Q$&$P↔Q$&¬$(P↔Q)$\\
+    \hline
+    $T$&$T$&$T$&$F$\\
+    $T$&$F$&$F$&$T$\\
+    $F$&$T$&$F$&$T$\\
+    $F$&$F$&$T$&$F$
+  \end{tabular}
+#+END_LaTeX
+  6.
+#+BEGIN_LaTeX
+  \begin{enumerate}
+  \item ¬$P↔$¬$Q:$\\
+    \begin{tabular}{l|l||l|l|l}
+      $P$&$Q$&¬$P$&¬$Q$&¬$P↔$¬$Q$\\
+      \hline 
+      $T$&$T$&$F$&$F$&$T$\\
+      $T$&$F$&$F$&$T$&$F$\\
+      $F$&$T$&$T$&$F$&$F$\\
+      $F$&$F$&$T$&$T$&$T$
+    \end{tabular}
+  \item $(P∨$¬$Q)$→$P:$\\
+    \begin{tabular}{l|l||l|l|l}
+      $P$&$Q$&¬$Q⇔α$&$P∨α⇔β$&$β$→$P$\\
+      \hline 
+      $T$&$T$&$F$&$T$&$T$\\
+      $T$&$F$&$T$&$T$&$T$\\
+      $F$&$T$&$F$&$F$&$T$\\
+      $F$&$F$&$T$&$T$&$F$
+    \end{tabular}
+  \item ¬$[P∧(Q∨R)]:$\\
+    \begin{tabular}{l|l||l|l|l|l}
+      $P$&$Q$&$R$&$Q∨R⇔α$&$P∧α⇔β$&¬$β$\\
+      \hline 
+      $T$&$T$&$T$&$T$&$T$&$F$\\
+      $T$&$T$&$F$&$T$&$T$&$F$\\
+      $T$&$F$&$T$&$T$&$T$&$F$\\
+      $T$&$F$&$F$&$F$&$F$&$T$\\
+      $F$&$T$&$T$&$T$&$F$&$T$\\
+      $F$&$T$&$F$&$T$&$F$&$T$\\
+      $F$&$F$&$T$&$T$&$F$&$T$\\
+      $F$&$F$&$F$&$F$&$F$&$T$
+    \end{tabular}
+  \end{enumerate}
+#+END_LaTeX
+  7.
+     1.
+  8. Lexicographic order for statements $P,Q,R,S:$\\
+#+BEGIN_LaTeX
+  \begin{tabular}{l|l|l|l}
+    $P$&$Q$&$R$&$S$\\
+    \hline 
+    $T$&$T$&$T$&$T$\\
+    $T$&$T$&$T$&$F$\\
+    $T$&$T$&$F$&$T$\\
+    $T$&$T$&$F$&$F$\\
+    $T$&$F$&$T$&$T$\\
+    $T$&$F$&$T$&$F$\\
+    $T$&$F$&$F$&$T$\\
+    $T$&$F$&$F$&$F$\\
+    $F$&$T$&$T$&$T$\\
+    $F$&$T$&$T$&$F$\\
+    $F$&$T$&$F$&$T$\\
+    $F$&$T$&$F$&$F$\\
+    $F$&$F$&$T$&$T$\\
+    $F$&$F$&$T$&$F$\\
+    $F$&$F$&$F$&$T$\\
+    $F$&$F$&$F$&$F$
+  \end{tabular}
+#+END_LaTeX
+
+* Elementary Calculus: An Infinitesimal Approach; Keisler
+
+#+BEGIN_LaTeX
+\begin{enumerate}
+\item The distance $D$ between points $P(2,9)$ and $Q(-1,13)$, given
+  $(Δx)²+(Δy)² = D²: (x₂ - x₁)² + (y₂ - y₁)² = D².$
+  Substituting:—
+  \begin{equation}{}
+    \begin{split}
+      D² &= (-3)² + 4² \\
+      &= 9 + 16 \\
+      &= 25; ⟹ \\
+      D &= \sqrt{25} \\
+      &= 5.
+    \end{split}
+    \end{equation}
+  \item Similarly, for $P(1,-2),Q(2,10): D² = (2 - 1)² + [10 - (-2)]²
+    = 1² + 12² = D² ⟹ \sqrt{145} = \sqrt{D²} ⟹ D = \sqrt{145}.$
+    
+  \item For $P(0,0),Q(-2,-3): Δx = 2; Δy = 3$; therefore $4 + 9 = D²$, and $D =
+    \sqrt{13}.$
+  \item For $P(-1,-1), Q(4,4): Δx = 5; Δy = 5; (Δx)² + (Δy)² ≡ 5² + 5² = 25 + 25 = 50 ⟹ D² = 50 ⟹ D = 5\sqrt{2}$.
+  \item For $P(6,1), Q(-7,1): \sqrt{[(-7) - 6]² + 0²} = \sqrt{D²}$,
+    thus $\sqrt{169 + 0} = \sqrt{D²}$, thus $D = \sqrt{169} = 13$ .
+  \item For $P(5,10), Q(9,10): Δx = 4, Δy = 0; D = 4.$
+\end{enumerate}
+#+END_LaTeX
+
+
