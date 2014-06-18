@@ -1,0 +1,90 @@
+#+Title: Discrete Mathematcis Demystified; Krantz
+#+AUTHOR: Evans Winner
+#+OPTIONS: tex:verbatim 
+#+OPTIONS: tex:t
+#+LaTeX_CLASS: article
+
+* Introduction
+
+First, this is the Emacs Lisp that is required in order to export the
+org-mode buffer of this file to PDF:
+
+#+begin_src emacs-lisp
+(require 'org-install)
+(require 'ob-tangle)
+(require 'ob-shen)
+(require 'ox-latex)
+(require 'ob-scheme)
+(setq org-latex-pdf-process '("lualatex %f"))
+(setq org-src-fontify-natively t)
+(setq org-latex-listings nil) ; doesn’t work because the LaTeX
+                              ; ‘listings’ package doesn’t have
+                              ; a shen backend.
+
+(setq org-latex-default-packages-alist
+      '(
+       ("" "amsmath" t)
+       ("" "amsthm" t)
+       ("T1" "fontenc" t)
+       ("" "fixltx2e" nil)
+       ("" "graphicx" t)
+       ("" "longtable" nil)
+       ("" "float" nil)
+       ("" "wrapfig" nil)
+       ("normalem" "ulem" t)
+       ("" "textcomp" t)
+       ("" "marvosym" t)
+       ("" "wasysym" t)
+       ("" "latexsym" t)
+       ("" "amssymb" t)
+       ("" "amstext" nil)
+       ("" "hyperref" nil)
+       ("" "fontspec" t)
+       ("" "tabularx" t)
+       ("" "enumerate" t)
+       ("utf8x" "luainputenc" t)
+       ("" "unicode-math" t0)
+       "\\setmathfont{Latin Modern Math}"
+       "\\setmathfont{STIXGeneral}"
+       "\\tolerance=1000"))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scheme . t)
+   (emacs-lisp . t)
+   ))
+#+end_src
+
+#+RESULTS:
+| (scheme . t) | (emacs-lisp . t) |
+
+* Discrete Mathematcis Demystified; Krantz
+** “You Try It” (pg 6)
+
+A truth table for “The number $x$ is positive ($p$) and is a perfect
+square ($q$).”
+
+\begin{tabular}{l|c|r}
+$p$ & $q$ & $p\land q$ \\
+\hline
+$T$ & $T$ & $T$ \\
+$T$ & $F$ & $F$ \\
+$F$ & $T$ & $F$ \\
+$F$ & $F$ & $F$ \\
+\end{tabular}
+
+** Chapter 1, exercises
+ \begin{enumerate}
+ \item 
+ \begin{tabular}{l|l|l|l|l|l}
+ $S$ & $T$ & $(S\land T)$ & $(S\vee T)$ & $\neg (S\vee T)$ & $(S\land T) \vee \neg (S\vee T)$ \\ 
+ \hline
+ $T$ & $T$ & $T$ & $T$ & $F$ & $T$ \\
+ $T$ & $F$ & $F$ & $T$ & $F$ & $T$ \\
+ $F$ & $T$ & $F$ & $T$ & $F$ & $T$ \\
+ $F$ & $F$ & $F$ & $F$ & $T$ & $T$ \\
+ \end{tabular}
+ 
+
+ \end{enumerate}
+
+

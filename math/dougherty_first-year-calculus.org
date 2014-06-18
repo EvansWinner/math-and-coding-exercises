@@ -1,4 +1,4 @@
-#+Title: Exercises in Mathematics, Algorithmics and Computer Programming
+#+Title: First Year Calculus; Dougherty
 #+AUTHOR: Evans Winner
 #+OPTIONS: tex:verbatim 
 #+OPTIONS: tex:t
@@ -56,79 +56,6 @@ org-mode buffer of this file to PDF:
 
 #+RESULTS:
 | (scheme . t) | (emacs-lisp . t) |
-
-* Discrete Mathematics and its Applications; Rosen
-
-Apropos of Chapter one, Example 13, bitwise operations defined on
-lists in Shen:
-
-#+begin_src shen
-(define bw-or
-  0 0 -> 0
-  _ _ -> 1)
-(define bw-and
-  1 1 -> 1
-  _ _ -> 0)
-(define bw-xor
-  X X -> 1
-  _ _ -> 0)
-(define bw-nor
-  0 0 -> 1
-  _ _ -> 0)
-(define bw-nand
-  1 1 -> 0
-  _ _ -> 1)
-
-(define bitwise
-  F [] [] -> []
-  F X Y -> (cons
-	    ((function F) (hd X) (hd Y))
-	    (bitwise F (tl X) (tl Y))))
-#+end_src
-
-Using this, we can execute the following code in the interpreter:
-
-=(bitwise bw-or [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
-
-$\Longrightarrow$ =[1 1 1 0 1 1 1 1 1 1]=
-
-=(bitwise bw-and [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
-
-$\Longrightarrow$ =[0 1 0 0 0 1 0 1 0 0]=
-
-=(bitwise bw-xor [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
-
-$\Longrightarrow$ =[0 1 0 1 0 1 0 1 0 0]=
-
-* Discrete Mathematcis Demystified; Krantz
-** “You Try It” (pg 6)
-
-A truth table for “The number $x$ is positive ($p$) and is a perfect
-square ($q$).”
-
-\begin{tabular}{l|c|r}
-$p$ & $q$ & $p\land q$ \\
-\hline
-$T$ & $T$ & $T$ \\
-$T$ & $F$ & $F$ \\
-$F$ & $T$ & $F$ \\
-$F$ & $F$ & $F$ \\
-\end{tabular}
-
-** Chapter 1, exercises
- \begin{enumerate}
- \item 
- \begin{tabular}{l|l|l|l|l|l}
- $S$ & $T$ & $(S\land T)$ & $(S\vee T)$ & $\neg (S\vee T)$ & $(S\land T) \vee \neg (S\vee T)$ \\ 
- \hline
- $T$ & $T$ & $T$ & $T$ & $F$ & $T$ \\
- $T$ & $F$ & $F$ & $T$ & $F$ & $T$ \\
- $F$ & $T$ & $F$ & $T$ & $F$ & $T$ \\
- $F$ & $F$ & $F$ & $F$ & $T$ & $T$ \\
- \end{tabular}
- 
-
- \end{enumerate}
 
 * First Year Calculus; Dougherty
 
@@ -300,34 +227,6 @@ $F$ & $F$ & $F$ \\
     $F$&$F$&$F$&$T$\\
     $F$&$F$&$F$&$F$
   \end{tabular}
-#+END_LaTeX
-
-* Elementary Calculus: An Infinitesimal Approach; Keisler
-
-#+BEGIN_LaTeX
-\begin{enumerate}
-\item The distance $D$ between points $P(2,9)$ and $Q(-1,13)$, given
-  $(Δx)²+(Δy)² = D²: (x₂ - x₁)² + (y₂ - y₁)² = D².$
-  Substituting:—
-  \begin{equation}{}
-    \begin{split}
-      D² &= (-3)² + 4² \\
-      &= 9 + 16 \\
-      &= 25; ⟹ \\
-      D &= \sqrt{25} \\
-      &= 5.
-    \end{split}
-    \end{equation}
-  \item Similarly, for $P(1,-2),Q(2,10): D² = (2 - 1)² + [10 - (-2)]²
-    = 1² + 12² = D² ⟹ \sqrt{145} = \sqrt{D²} ⟹ D = \sqrt{145}.$
-    
-  \item For $P(0,0),Q(-2,-3): Δx = 2; Δy = 3$; therefore $4 + 9 = D²$, and $D =
-    \sqrt{13}.$
-  \item For $P(-1,-1), Q(4,4): Δx = 5; Δy = 5; (Δx)² + (Δy)² ≡ 5² + 5² = 25 + 25 = 50 ⟹ D² = 50 ⟹ D = 5\sqrt{2}$.
-  \item For $P(6,1), Q(-7,1): \sqrt{[(-7) - 6]² + 0²} = \sqrt{D²}$,
-    thus $\sqrt{169 + 0} = \sqrt{D²}$, thus $D = \sqrt{169} = 13$ .
-  \item For $P(5,10), Q(9,10): Δx = 4, Δy = 0; D = 4.$
-\end{enumerate}
 #+END_LaTeX
 
 

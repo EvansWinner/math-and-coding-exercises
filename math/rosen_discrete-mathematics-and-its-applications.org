@@ -1,0 +1,103 @@
+#+Title: Discrete Mathematics and its Applications; Rosen
+#+AUTHOR: Evans Winner
+#+OPTIONS: tex:verbatim 
+#+OPTIONS: tex:t
+#+LaTeX_CLASS: article
+
+* Introduction
+
+First, this is the Emacs Lisp that is required in order to export the
+org-mode buffer of this file to PDF:
+
+#+begin_src emacs-lisp
+(require 'org-install)
+(require 'ob-tangle)
+(require 'ob-shen)
+(require 'ox-latex)
+(require 'ob-scheme)
+(setq org-latex-pdf-process '("lualatex %f"))
+(setq org-src-fontify-natively t)
+(setq org-latex-listings nil) ; doesn’t work because the LaTeX
+                              ; ‘listings’ package doesn’t have
+                              ; a shen backend.
+
+(setq org-latex-default-packages-alist
+      '(
+       ("" "amsmath" t)
+       ("" "amsthm" t)
+       ("T1" "fontenc" t)
+       ("" "fixltx2e" nil)
+       ("" "graphicx" t)
+       ("" "longtable" nil)
+       ("" "float" nil)
+       ("" "wrapfig" nil)
+       ("normalem" "ulem" t)
+       ("" "textcomp" t)
+       ("" "marvosym" t)
+       ("" "wasysym" t)
+       ("" "latexsym" t)
+       ("" "amssymb" t)
+       ("" "amstext" nil)
+       ("" "hyperref" nil)
+       ("" "fontspec" t)
+       ("" "tabularx" t)
+       ("" "enumerate" t)
+       ("utf8x" "luainputenc" t)
+       ("" "unicode-math" t0)
+       "\\setmathfont{Latin Modern Math}"
+       "\\setmathfont{STIXGeneral}"
+       "\\tolerance=1000"))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scheme . t)
+   (emacs-lisp . t)
+   ))
+#+end_src
+
+#+RESULTS:
+| (scheme . t) | (emacs-lisp . t) |
+
+* Discrete Mathematics and its Applications; Rosen
+
+Apropos of Chapter one, Example 13, bitwise operations defined on
+lists in Shen:
+
+#+begin_src shen
+(define bw-or
+  0 0 -> 0
+  _ _ -> 1)
+(define bw-and
+  1 1 -> 1
+  _ _ -> 0)
+(define bw-xor
+  X X -> 1
+  _ _ -> 0)
+(define bw-nor
+  0 0 -> 1
+  _ _ -> 0)
+(define bw-nand
+  1 1 -> 0
+  _ _ -> 1)
+
+(define bitwise
+  F [] [] -> []
+  F X Y -> (cons
+	    ((function F) (hd X) (hd Y))
+	    (bitwise F (tl X) (tl Y))))
+#+end_src
+
+Using this, we can execute the following code in the interpreter:
+
+=(bitwise bw-or [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[1 1 1 0 1 1 1 1 1 1]=
+
+=(bitwise bw-and [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[0 1 0 0 0 1 0 1 0 0]=
+
+=(bitwise bw-xor [0 1 1 0 1 1 0 1 1 0] [1 1 0 0 0 1 1 1 0 1])=
+
+$\Longrightarrow$ =[0 1 0 1 0 1 0 1 0 0]=
+
+

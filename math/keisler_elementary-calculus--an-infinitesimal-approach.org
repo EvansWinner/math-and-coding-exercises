@@ -1,0 +1,88 @@
+#+Title: Elementary Calculus: An Infinitesimal Approach; Keisler
+#+AUTHOR: Evans Winner
+#+OPTIONS: tex:verbatim 
+#+OPTIONS: tex:t
+#+LaTeX_CLASS: article
+
+* Introduction
+
+First, this is the Emacs Lisp that is required in order to export the
+org-mode buffer of this file to PDF:
+
+#+begin_src emacs-lisp
+(require 'org-install)
+(require 'ob-tangle)
+(require 'ob-shen)
+(require 'ox-latex)
+(require 'ob-scheme)
+(setq org-latex-pdf-process '("lualatex %f"))
+(setq org-src-fontify-natively t)
+(setq org-latex-listings nil) ; doesn’t work because the LaTeX
+                              ; ‘listings’ package doesn’t have
+                              ; a shen backend.
+
+(setq org-latex-default-packages-alist
+      '(
+       ("" "amsmath" t)
+       ("" "amsthm" t)
+       ("T1" "fontenc" t)
+       ("" "fixltx2e" nil)
+       ("" "graphicx" t)
+       ("" "longtable" nil)
+       ("" "float" nil)
+       ("" "wrapfig" nil)
+       ("normalem" "ulem" t)
+       ("" "textcomp" t)
+       ("" "marvosym" t)
+       ("" "wasysym" t)
+       ("" "latexsym" t)
+       ("" "amssymb" t)
+       ("" "amstext" nil)
+       ("" "hyperref" nil)
+       ("" "fontspec" t)
+       ("" "tabularx" t)
+       ("" "enumerate" t)
+       ("utf8x" "luainputenc" t)
+       ("" "unicode-math" t0)
+       "\\setmathfont{Latin Modern Math}"
+       "\\setmathfont{STIXGeneral}"
+       "\\tolerance=1000"))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((scheme . t)
+   (emacs-lisp . t)
+   ))
+#+end_src
+
+#+RESULTS:
+| (scheme . t) | (emacs-lisp . t) |
+
+* Elementary Calculus: An Infinitesimal Approach; Keisler
+
+#+BEGIN_LaTeX
+\begin{enumerate}
+\item The distance $D$ between points $P(2,9)$ and $Q(-1,13)$, given
+  $(Δx)²+(Δy)² = D²: (x₂ - x₁)² + (y₂ - y₁)² = D².$
+  Substituting:—
+  \begin{equation}{}
+    \begin{split}
+      D² &= (-3)² + 4² \\
+      &= 9 + 16 \\
+      &= 25; ⟹ \\
+      D &= \sqrt{25} \\
+      &= 5.
+    \end{split}
+    \end{equation}
+  \item Similarly, for $P(1,-2),Q(2,10): D² = (2 - 1)² + [10 - (-2)]²
+    = 1² + 12² = D² ⟹ \sqrt{145} = \sqrt{D²} ⟹ D = \sqrt{145}.$
+    
+  \item For $P(0,0),Q(-2,-3): Δx = 2; Δy = 3$; therefore $4 + 9 = D²$, and $D =
+    \sqrt{13}.$
+  \item For $P(-1,-1), Q(4,4): Δx = 5; Δy = 5; (Δx)² + (Δy)² ≡ 5² + 5² = 25 + 25 = 50 ⟹ D² = 50 ⟹ D = 5\sqrt{2}$.
+  \item For $P(6,1), Q(-7,1): \sqrt{[(-7) - 6]² + 0²} = \sqrt{D²}$,
+    thus $\sqrt{169 + 0} = \sqrt{D²}$, thus $D = \sqrt{169} = 13$ .
+  \item For $P(5,10), Q(9,10): Δx = 4, Δy = 0; D = 4.$
+\end{enumerate}
+#+END_LaTeX
+
+
