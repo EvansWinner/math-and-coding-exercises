@@ -1,4 +1,4 @@
---  Write a program to display your name on the monitor.
+--  Write a program to display your name and address on the monitor
 
 with Ada.Text_Io;
 use Ada.Text_Io;
