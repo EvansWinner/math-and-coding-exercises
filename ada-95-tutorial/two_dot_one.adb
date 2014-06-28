@@ -1,9 +1,9 @@
 --  Write a program to display your name on the monitor.
 
-with Ada.Text_Io;
-use Ada.Text_Io;
+with Ada.Text_IO;
+use Ada.Text_IO;
 
-procedure One_Dot_One is
+procedure Two_Dot_One is
 begin
    Put_Line("Evans Winner");	-- That's me! Duuuuuh....
-end One_Dot_One;
+end Two_Dot_One;
