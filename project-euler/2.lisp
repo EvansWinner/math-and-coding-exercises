@@ -11,7 +11,7 @@
 	       (list (+ (car (last list))
 			(car (last list 2))))))))
 
-(defun euler-2 ()
-  (reduce #'+ (remove-if #'oddp (butlast (fib-list 4000000)))))
+(defun euler-2 (upper-bound)
+  (reduce #'+ (remove-if #'oddp (butlast (fib-list upper-bound)))))
 
-;; (euler-2) ==> 4613732
+;; (euler-2 4000000) ==> 4613732
