@@ -1,6 +1,6 @@
 * Exercises
 
-Note: There is very little here yet
+** Note: There is very little here yet
 
 This is a record of my progress toward my goal of teaching myself the
 rudiments of mathematics, algorithmics and something of computer
@@ -19,3 +19,11 @@ programming language semantics (type theory, et cetera).
    and there.
  - there is not much here -- I’ve really only just begun and may or
    may not make much progress.
+
+** Bookmarks
+
+ - project-euler: Next=2
+ - ada-95-tutorial: http://www.infres.enst.fr/~pautet/Ada95/chap03.htm
+   ==> next=wahtever is first in chapter
+ - interview-questions: next=1 (did 2 already)
+ - 
