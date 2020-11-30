@@ -1,4 +1,4 @@
-;; Project Euler number 2.  This is a recursive solition but I'm not
+;; Project Euler number 2.  This is a recursive solution but I'm not
 ;; sure actually what the space profile of this function is.
 
 (defun fib-list (upper-bound &optional (list '(1 2)))
