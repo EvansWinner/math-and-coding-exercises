@@ -1,4 +1,4 @@
-"""Brute force Project Euler #4."""
+"""More or less brute force Project Euler #4."""
 
 candidate = (0, 0, 0)
 for i in range(999, 99, -1):
