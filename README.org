@@ -22,8 +22,6 @@ programming language semantics (type theory, et cetera).
 
 ** Bookmarks
 
- - project-euler: Next=2
  - ada-95-tutorial: http://www.infres.enst.fr/~pautet/Ada95/chap03.htm
    ==> next=wahtever is first in chapter
  - interview-questions: next=1 (did 2 already)
- - 

@@ -1,4 +1,4 @@
-"""Brute force Project Euler #4."""
+"""More or less brute force Project Euler #4."""
 
 candidate = (0, 0, 0)
 for i in range(999, 99, -1):
@@ -6,7 +6,7 @@ for i in range(999, 99, -1):
         product = i * j
         if product <= candidate[2]:
             # short-circuit as there can't be any higher products
-            # from lower productands
+            # from lower j for this i.
             break
         elif str(product) == str(product)[::-1]:
             candidate = (i, j, product)
