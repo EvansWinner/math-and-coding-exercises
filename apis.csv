@@ -1,541 +1,244 @@
-Dogs,Based on the Stanford Dogs Dataset,No,Yes,https://dog.ceo/dog-api/
-HTTPCat,Cat for every HTTP Status,No,Yes,https://http.cat/
-Movebank,Movement and Migration data of animals,No,Yes,https://github.com/movebank/movebank-api-doc
-RescueGroups,Adoption,No,Yes,https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home
-Jikan,Unofficial MyAnimeList API,No,Yes,https://jikan.me
-Studio Ghibli,Resources from Studio Ghibli films,No,Yes,https://ghibliapi.herokuapp.com
-BookNomads,Books published in the Netherlands and Flanders (about 2.5 million), book covers, and related data,No,Yes,https://www.booknomads.com/dev
-British National Bibliography,Books,No,No,http://bnb.data.bl.uk/
-Open Library,Books, book covers, and related data,No,Yes,https://openlibrary.org/developers/api
-Clearbit Logo API,Search for company logos and embed them in your projects,No,Yes,https://clearbit.com/docs#logo-api
-Domainsdb.info,Registered Domain Names Search,No,Yes,https://domainsdb.info/
-markerapi,Trademark Search,No,No,http://www.markerapi.com/
-Church Calendar,Catholic liturgical calendar,No,No,http://calapi.inadiutorium.cz/
-Czech Namedays Calendar,Lookup for a name and returns nameday date,No,No,http://svatky.adresa.info/
-Hebrew Calendar,Convert between Gregarian and Hebrew, fetch Shabbat and Holiday times, etc,No,No,https://www.hebcal.com/home/developer-apis
-LectServe,Protestant liturgical calendar,No,No,http://www.lectserve.com
-Non-Working Days,Database of ICS files for non working days,No,Yes,https://github.com/gadael/icsdb
-Blockchain,Bitcoin Payment, Wallet & Transaction Data,No,Yes,https://www.blockchain.info/api
-CoinDesk,Bitcoin Price Index,No,No,http://www.coindesk.com/api/
-CoinMarketCap,Cryptocurrencies Prices,No,Yes,https://coinmarketcap.com/api/
-CryptoCompare,Cryptocurrencies Comparison,No,Yes,https://www.cryptocompare.com/api#
-Cryptonator,Cryptocurrencies Exchange Rates,No,Yes,https://www.cryptonator.com/api/
-MercadoBitcoin,Brazilian Cryptocurrency Information,No,Yes,https://www.mercadobitcoin.net/api-doc/
-Czech National Bank,A collection of exchange rates,No,Yes,https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.xml
-Fixer.io,Exchange rates and currency conversion,No,Yes,http://fixer.io
-languagelayer,Language detection,No,Yes,https://languagelayer.com
-mailboxlayer,Email address validation,No,Yes,https://mailboxlayer.com
-MailTest,Email address validation,No,Yes,http://mailtest.in/documentation/
-NumValidate,Open Source phone number validation,No,Yes,https://numvalidate.com
-numverify,Phone number validation,No,Yes,https://numverify.com
-PurgoMalum,Content validator against profanity & obscenity,No,No,http://www.purgomalum.com
-vatlayer,VAT number validation,No,Yes,https://vatlayer.com
-APIs.guru,Wikipedia for Web APIs, OpenAPI/Swagger specs for public APIs,No,Yes,https://apis.guru/api-doc/
-BetterMeta,Return a site's meta tags in JSON format,X-Mashape-Key,Yes,http://bettermeta.io
-Bitbucket,Pull public information for a Bitbucket account,No,Yes,https://api.bitbucket.org/2.0/users/karllhughes
-CDNJS,Library info on CDNJS,No,Yes,https://api.cdnjs.com/libraries/jquery
-Changelogs.md,Structured changelog metadata from open source projects,No,Yes,https://changelogs.md
-Count.io,Persistent counting and A/B testing,No,Yes,https://count.io
-DigitalOcean Status,Status of all DigitalOcean services,No,Yes,https://status.digitalocean.com/api/v1
-DomainDb Info,Domain name search to find all domains containing particular words/phrases/etc,No,Yes,https://domainsdb.info/apidomainsdb/index.php
-Genderize.io,Determines a gender from a first name,No,Yes,https://genderize.io
-Github,Information for a user's Github profile,No,Yes,https://developer.github.com/v3/
-HTTP2.Pro,Test endpoints for client and server HTTP/2 protocol support,No,Yes,https://http2.pro/doc/api
-IPify,A simple IP Address API,No,Yes,https://www.ipify.org/
-IPinfo,Another simple IP Address API,No,Yes,https://ipinfo.io/developers
-JSON 2 JSONP,Convert JSON to JSONP (on-the-fly) for easy cross-domain data requests using client-side JavaScript,No,Yes,https://json2jsonp.com/
-Judge0 API,Compile and run source code,No,Yes,https://api.judge0.com/
-Let's Validate,Uncovers the technologies used on websites and URL to thumbnail,No,Yes,https://github.com/letsvalidate/api
-Myjson,A simple JSON store for your web or mobile app,No,No,http://myjson.com/api
-Plino,Spam filtering system,No,Yes,https://plino.herokuapp.com/
-Public APIs,A collective list of free JSON APIs for use in web development,No,Yes,https://github.com/toddmotto/public-apis/tree/master/json
-QR code,Generate and decode / read QR code graphics,No,Yes,http://goqr.me/api/
-ReqRes,A hosted REST-API ready to respond to your AJAX requests,No,Yes,https://reqres.in/ 
-Scrape Website Email,Grabs email addresses from a URL,`X-Mashape-Key`,Yes,https://market.mashape.com/tommytcchan/scrape-website-email
-SHOUTCLOUD,ALL-CAPS AS A SERVICE,No,No,http://shoutcloud.io/
-Verse,Check what's the latest version of your favorite open-source project,No,Yes,https://verse.pawelad.xyz/
-XML to JSON,Integration developer utility APIs,No,Yes,https://developers.wso2apistore.com/
-Wordnik,Dictionary Data,No,No,http://developer.wordnik.com
-File.io,File Sharing,No,Yes,https://www.file.io
-pdflayer API,HTML/URL to PDF,No,Yes,https://pdflayer.com
-UK Carbon Intensity,The Official Carbon Intensity API for Great Britain developed by National Grid,No,Yes,https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v1-0-0
-IEX,Stocks and Market Data,No,Yes,https://iextrading.com/developer/
-Razorpay IFSC,Indian Financial Systems Code (Bank Branch Codes),No,Yes,https://ifsc.razorpay.com/
-RoutingNumbers.info,ACH/NACHA Bank Routing Numbers,No,Yes,https://www.routingnumbers.info/api/index.html
-VAT Rates,A collection of all VAT rates for EU countries,No,Yes,https://jsonvat.com/
-BigOven,Recipe Search,`X-Mashape-Key`,No,http://api2.bigoven.com/
-Open Food Facts,Food Products Database,No,Yes,https://world.openfoodfacts.org/data
-PunkAPI,Brewdog Beer Recipes,No,Yes,https://punkapi.com/
-Recipe Puppy,Food,No,No,http://www.recipepuppy.com/about/api/
-TacoFancy,Community-driven taco database,No,No,https://github.com/evz/tacofancy-api
-The Report of the Week,Food & Drink Reviews,No,Yes,https://github.com/andyklimczak/TheReportOfTheWeek-API
-Battlefield 4,Battlefield 4 Information,No,Yes,https://bf4stats.com/api
-Chuck Norris Database,Jokes,No,No,http://www.icndb.com/api/
-Clash of Clans,Clash of Clans Game Information,No,Yes,https://developer.clashofclans.com
-Clash Royale,Clash Royale Game Information,No,Yes,https://github.com/martincarrera/clash-royale-api
-Comic Vine,Comics,No,Yes,https://comicvine.gamespot.com/api/documentation
-Deck of Cards,Deck of Cards,No,No,http://deckofcardsapi.com/
-Dota 2,Provides information about Player stats , Match stats, Rankings for Dota 2,No,Yes,https://docs.opendota.com/
-Games,Minecraft and other server info & user info),No,Yes,https://docs.gameapis.net/
-Giant Bomb,Video Games,No,Yes,https://www.giantbomb.com/api/documentation
-Hearthstone,Hearthstone Cards Information,`X-Mashape-Key`,Yes,http://hearthstoneapi.com/
-Jokes,Programming and general jokes,No,Yes,https://github.com/15Dkatz/official_joke_api
-Jservice,Jeopardy Question Database,No,No,http://jservice.io
-Magic The Gathering,Magic The Gathering Game Information,No,No,http://magicthegathering.io/
-Open Trivia,Trivia Questions,No,Yes,https://opentdb.com/api_config.php
-Pokéapi,Pokémon Information,No,No,http://pokeapi.co
-Qriusity,Quiz/Trivia Questions,No,Yes,https://qriusity.com/
-xkcd,Retrieve xkcd comics as JSON,No,Yes,https://xkcd.com/json.html
-adresse.data.gouv.fr,Address database of France, geocoding, and reverse,No,Yes,https://adresse.data.gouv.fr
-CitySDK,Open APIs for select European cities,No,Yes,http://www.citysdk.eu/citysdk-toolkit/
-FreeGeoIP,Geolocation of IP addresses,No,Yes,https://freegeoip.net/
-GeoApi,French geographical data,No,Yes,https://api.gouv.fr/api/geoapi.html
-Geocode.xyz,Provides worldwide forward/reverse geocoding, batch geocoding and geoparsing,No,Yes,https://geocode.xyz/
-GeoNames,Place names and other geographical data,No,No,http://www.geonames.org/export/web-services.html
-GraphLoc,Free GraphQL IP Geolocation API,No,Yes,https://www.graphloc.com
-IP 2 Country,Map an IP to a country,No,Yes,https://ip2country.info
-IP Address Details,Find geolocation with ip address,No,Yes,https://ipinfo.io/
-IP Location,Find IP address location information,No,Yes,https://ipapi.co/
-IP Vigilante,Free IP Geolocation API,No,Yes,https://www.ipvigilante.com/
-Mexico,Mexico RESTful zip codes API,No,Yes,https://github.com/IcaliaLabs/sepomex
-OnWater,Determine if a lat/lon is on water or land,No,Yes,https://onwater.io/
-OpenCage,Forward and reverse geocoding using open data,No,Yes,https://geocoder.opencagedata.com
-PostcodeData.nl,Provide geolocation data based on postcode for Dutch addresses,No,No,http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&streetnumber=60&ref=domeinnaam.nl&type=json
-Postcodes.io,Postcode lookup & Geolocation for the UK,No,Yes,https://postcodes.io
-REST Countries,Get information about countries via a RESTful API,No,Yes,https://restcountries.eu
-ViaCep,Brazil RESTful zip codes API,No,Yes,https://viacep.com.br
-Zippopotam,Get information about place such as country, city, state, etc,No,No,http://www.zippopotam.us
-BCLaws,Access to the laws of British Columbia,No,No,http://www.bclaws.ca/civix/template/complete/api/index.html
-Census.gov,The US Census Bureau provides various APIs and data sets on demographics and businesses,No,Yes,https://www.census.gov/data/developers/data-sets.html
-EPA,Web services and data sets from the US Environmental Protection Agency,No,Yes,https://developer.epa.gov/category/api/
-Food Standards Agency,UK food hygiene rating data API,No,No,http://ratings.food.gov.uk/open-data/en-GB
-Diabetes,Logging and retrieving diabetes information,No,No,http://predictbgl.com/api/
-Flutrack,Influenza-like symptoms with geotracking,No,No,http://www.flutrack.org/
-Healthcare.gov,Educational content about the US Health Insurance Marketplace,No,Yes,https://www.healthcare.gov/developers/
-Makeup,Makeup Information,No,No,http://makeup-api.herokuapp.com/
-Medicare,Access to the data from the CMS - medicare.gov,No,Yes,https://data.medicare.gov/developers
-NPPES,National Plan & Provider Enumeration System, info on healthcare providers registered in US,No,Yes,https://npiregistry.cms.hhs.gov/registry/help-api
-openFDA,Public FDA data about drugs, devices, and foods,No,Yes,https://open.fda.gov/api/
-USDA Nutrients,National Nutrient Database for Standard Reference,No,Yes,https://ndb.nal.usda.gov/ndb/doc/index
-Github Jobs,Jobs for software developers,No,Yes,https://jobs.github.com/api
-Open Skills,Job titles, skills, and related jobs data,No,No,https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview
-Search.gov Jobs,Tap into a list of current jobs openings with the United States government,No,Yes,https://search.gov/developer/jobs.html
-Newton,Symbolic and Arithmetic Math Calculator,No,Yes,https://newton.now.sh/
-Numbers API,Facts about numbers,No,No,http://numbersapi.com
-Bandsintown,Music Events,No,Yes,https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-iTunes Search,Software products,No,Yes,https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/
-Lyrics.ovh,Simple API to retrieve the lyrics of a song,No,Yes,http://docs.lyricsovh.apiary.io/
-MusicBrainz,Music,No,Yes,https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2
-Songsterr,Provides guitar, bass and drums tabs and chords,No,Yes,https://www.songsterr.com/a/wa/api/
-Soundcloud,Music,No,Yes,https://developers.soundcloud.com/
-Chronicling America,Provides access to millions of pages of historic US newspapers from the Library of Congress,No,No,http://chroniclingamerica.loc.gov/about/api/
-18F,US Federal Government /Developer Program,No,No,http://18f.github.io/API-All-the-X/
-Abbreviation,Get abbreviations and meanings,`X-Mashape-Key`,Yes,https://market.mashape.com/daxeel/abbreviations
-Callook.info,United States ham radio callsigns,No,Yes,https://callook.info
-Celebinfo,Celebrity information,`X-Mashape-Key`,Yes,https://market.mashape.com/daxeel/celebinfo/
-Colorado Data Engine,Formatted and geolocated Colorado public data,No,Yes,http://codataengine.org/
-Colorado Information Marketplace,Colorado State Government Open Data,No,Yes,https://data.colorado.gov/
-Data USA,US Public Data,No,Yes,https://datausa.io/about/api/
-Dronestream,Tracks United States drone strikes,No,Yes,https://dronestre.am/
-Federal Register,The Daily Journal of the United States Government,No,Yes,https://www.federalregister.gov/reader-aids/developer-resources
-fonoApi,Mobile Device Description,No,Yes,https://fonoapi.freshpixl.com/
-French Address Search,French Government,No,Yes,https://adresse.data.gouv.fr/api
-Microlink.io,Turns any link into information,No,Yes,https://docs.microlink.io
-Open Government, Australia,Australian Government Open Data,No,Yes,https://www.data.gov.au/
-Open Government, Canada,Canadian Government Open Data,No,No,http://open.canada.ca/en
-Open Government, New Zealand,New Zealand Government Open Data,No,Yes,https://www.data.govt.nz/
-Open Government, Taiwan,Taiwan Government Open Data,No,Yes,https://data.gov.tw/
-Open Government, USA,United States Government Open Data,No,Yes,https://www.data.gov/
-Prague Opendata,Prague City Open Data,No,No,http://opendata.praha.eu/en
-Quandl,Stock Market Data,No,Yes,https://www.quandl.com/
-Represent by Open North,Find Canadian Government Representatives,No,Yes,https://represent.opennorth.ca/
-Teleport,Quality of Life Data,No,Yes,https://developers.teleport.org/
-Wikipedia,Mediawiki Encyclopedia,No,Yes,https://www.mediawiki.org/wiki/API:Main_page
-Countly,Countly web analytics,No,No,http://resources.count.ly/docs
-Drupal.org,Drupal.org,No,Yes,https://www.drupal.org/drupalorg/docs/api
-USPTO,USA patent api services,No,Yes,https://www.uspto.gov/learning-and-resources/open-data-and-mobility
-chucknorris.io,JSON API for hand curated Chuck Norris jokes,No,Yes,https://api.chucknorris.io
-Forismatic,Inspirational Quotes,No,No,http://forismatic.com/en/api/
-icanhazdadjoke,The largest selection of dad jokes on the internet,No,Yes,https://icanhazdadjoke.com/api
-Quotes on Design,Inspirational Quotes,No,Yes,https://quotesondesign.com/api-v4-0/
-Traitify,Assess, collect, and analyze Personality,No,Yes,https://app.traitify.com/developer
-tronalddump.io,Api & web archive for the things Donald Trump has said,No,Yes,https://www.tronalddump.io
-Pixhost,Upload images, photos, galleries,No,Yes,https://pixhost.org/api/index.html
-PlaceKitten,Resizable kitten placeholder images,No,Yes,https://placekitten.com/
-ScreenShotLayer,URL 2 Image,No,Yes,https://screenshotlayer.com
-arcsecond.io,Multiple astronomy data sources,No,Yes,https://api.arcsecond.io/
-inspirehep.net,High Energy Physics info. system,No,Yes,https://inspirehep.net/info/hep/api?ln=en
-Launch Library,Upcoming Space Launches,No,Yes,https://launchlibrary.net/1.2/docs/api.html
-Minor Planet Center,Asterank.com Information,No,No,http://www.asterank.com/mpc
-NASA,NASA data, including imagery,No,Yes,https://api.nasa.gov
-Open Notify,ISS astronauts, current location, etc,No,No,http://open-notify.org/Open-Notify-API/
-SpaceX,Company, vehicle, launchpad and launch data,No,Yes,https://github.com/r-spacex/SpaceX-API
-Sunrise and Sunset,Sunset and sunrise times for a given latitude and longitude,No,Yes,https://sunrise-sunset.org/api
-USGS Earthquake Hazards Program,Earthquakes data real-time,No,Yes,https://earthquake.usgs.gov/fdsnws/event/1/
-USGS Water Services,Water quality and level info for rivers and lakes,No,Yes,https://waterservices.usgs.gov/
-World Bank,World Data,No,No,https://datahelpdesk.worldbank.org/knowledgebase/topics/125589
-AXFR Database,AXFR public database,No,No,http://api.axfrcheck.com
-HaveIBeenPwned,Passwords which have previously been exposed in data breaches,No,Yes,https://haveibeenpwned.com/API/v2
-UK Police,UK Police data,No,Yes,https://data.police.uk/docs/
-DonReach Social Count,Get the social share count of a URL from every major social network,No,Yes,https://donreach.com/social-share-count/
-Fuck Off as a Service,Asks someone to fuck off,No,Yes,https://www.foaas.com
-HackerNews,Social news for CS and entrepreneurship,No,Yes,https://github.com/HackerNews/API
-BikeWise,Bikewise is a place to learn about and report bike crashes, hazards, and thefts,No,Yes,https://www.bikewise.org/documentation/api_v2
-Cartola FC,The Cartola FC API serves to check the partial points of your team,No,Yes,https://github.com/wgenial/cartrolandofc
-City Bikes,City Bikes around the world,No,No,http://api.citybik.es/v2/
-Cricket Live Scores,Live cricket scores,`X-Mashape-Key`,Yes,https://market.mashape.com/dev132/cricket-live-scores
-Ergast F1,F1 data from the beginning of the world championships in 1950,No,No,http://ergast.com/mrd/
-Football-Data.org,Football Data,No,No,http://api.football-data.org/index
-NBA Stats,Current and historical NBA Statistics,No,Yes,https://any-api.com/nba_com/nba_com/docs/API_Description
-NFL Arrests,NFL Arrest Data,No,No,http://nflarrest.com/api/
-Pro Motocross,The RESTful AMA Pro Motocross lap times for every racer on the start gate,No,No,http://promotocrossapi.com
+Dogs,Based on the Stanford Dogs Dataset,No,Yes,https://dog.ceo/dog-api/,,,,,
+HTTPCat,Cat for every HTTP Status,No,Yes,https://http.cat/,,,,,
+Movebank,Movement and Migration data of animals,No,Yes,https://github.com/movebank/movebank-api-doc,,,,,
+RescueGroups,Adoption,No,Yes,https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home,,,,,
+Jikan,Unofficial MyAnimeList API,No,Yes,https://jikan.me,,,,,
+Studio Ghibli,Resources from Studio Ghibli films,No,Yes,https://ghibliapi.herokuapp.com,,,,,
+BookNomads,Books published in the Netherlands and Flanders (about 2.5 million), book covers, and related data,No,Yes,https://www.booknomads.com/dev,,,
+British National Bibliography,Books,No,No,http://bnb.data.bl.uk/,,,,,
+Open Library,Books, book covers, and related data,No,Yes,https://openlibrary.org/developers/api,,,
+Clearbit Logo API,Search for company logos and embed them in your projects,No,Yes,https://clearbit.com/docs#logo-api,,,,,
+Domainsdb.info,Registered Domain Names Search,No,Yes,https://domainsdb.info/,,,,,
+markerapi,Trademark Search,No,No,http://www.markerapi.com/,,,,,
+Church Calendar,Catholic liturgical calendar,No,No,http://calapi.inadiutorium.cz/,,,,,
+Czech Namedays Calendar,Lookup for a name and returns nameday date,No,No,http://svatky.adresa.info/,,,,,
+Hebrew Calendar,Convert between Gregarian and Hebrew, fetch Shabbat and Holiday times, etc,No,No,https://www.hebcal.com/home/developer-apis,,,
+LectServe,Protestant liturgical calendar,No,No,http://www.lectserve.com,,,,,
+Non-Working Days,Database of ICS files for non working days,No,Yes,https://github.com/gadael/icsdb,,,,,
+Blockchain,Bitcoin Payment, Wallet & Transaction Data,No,Yes,https://www.blockchain.info/api,,,,
+CoinDesk,Bitcoin Price Index,No,No,http://www.coindesk.com/api/,,,,,
+CoinMarketCap,Cryptocurrencies Prices,No,Yes,https://coinmarketcap.com/api/,,,,,
+CryptoCompare,Cryptocurrencies Comparison,No,Yes,https://www.cryptocompare.com/api#,,,,,
+Cryptonator,Cryptocurrencies Exchange Rates,No,Yes,https://www.cryptonator.com/api/,,,,,
+MercadoBitcoin,Brazilian Cryptocurrency Information,No,Yes,https://www.mercadobitcoin.net/api-doc/,,,,,
+Czech National Bank,A collection of exchange rates,No,Yes,https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.xml,,,,,
+Fixer.io,Exchange rates and currency conversion,No,Yes,http://fixer.io,,,,,
+languagelayer,Language detection,No,Yes,https://languagelayer.com,,,,,
+mailboxlayer,Email address validation,No,Yes,https://mailboxlayer.com,,,,,
+MailTest,Email address validation,No,Yes,http://mailtest.in/documentation/,,,,,
+NumValidate,Open Source phone number validation,No,Yes,https://numvalidate.com,,,,,
+numverify,Phone number validation,No,Yes,https://numverify.com,,,,,
+PurgoMalum,Content validator against profanity & obscenity,No,No,http://www.purgomalum.com,,,,,
+vatlayer,VAT number validation,No,Yes,https://vatlayer.com,,,,,
+APIs.guru,Wikipedia for Web APIs, OpenAPI/Swagger specs for public APIs,No,Yes,https://apis.guru/api-doc/,,,,
+BetterMeta,Return a site's meta tags in JSON format,X-Mashape-Key,Yes,http://bettermeta.io,,,,,
+Bitbucket,Pull public information for a Bitbucket account,No,Yes,https://api.bitbucket.org/2.0/users/karllhughes,,,,,
+CDNJS,Library info on CDNJS,No,Yes,https://api.cdnjs.com/libraries/jquery,,,,,
+Changelogs.md,Structured changelog metadata from open source projects,No,Yes,https://changelogs.md,,,,,
+Count.io,Persistent counting and A/B testing,No,Yes,https://count.io,,,,,
+DigitalOcean Status,Status of all DigitalOcean services,No,Yes,https://status.digitalocean.com/api/v1,,,,,
+DomainDb Info,Domain name search to find all domains containing particular words/phrases/etc,No,Yes,https://domainsdb.info/apidomainsdb/index.php,,,,,
+Genderize.io,Determines a gender from a first name,No,Yes,https://genderize.io,,,,,
+Github,Information for a user's Github profile,No,Yes,https://developer.github.com/v3/,,,,,
+HTTP2.Pro,Test endpoints for client and server HTTP/2 protocol support,No,Yes,https://http2.pro/doc/api,,,,,
+IPify,A simple IP Address API,No,Yes,https://www.ipify.org/,,,,,
+IPinfo,Another simple IP Address API,No,Yes,https://ipinfo.io/developers,,,,,
+JSON 2 JSONP,Convert JSON to JSONP (on-the-fly) for easy cross-domain data requests using client-side JavaScript,No,Yes,https://json2jsonp.com/,,,,,
+Judge0 API,Compile and run source code,No,Yes,https://api.judge0.com/,,,,,
+Let's Validate,Uncovers the technologies used on websites and URL to thumbnail,No,Yes,https://github.com/letsvalidate/api,,,,,
+Myjson,A simple JSON store for your web or mobile app,No,No,http://myjson.com/api,,,,,
+Plino,Spam filtering system,No,Yes,https://plino.herokuapp.com/,,,,,
+Public APIs,A collective list of free JSON APIs for use in web development,No,Yes,https://github.com/toddmotto/public-apis/tree/master/json,,,,,
+QR code,Generate and decode / read QR code graphics,No,Yes,http://goqr.me/api/,,,,,
+ReqRes,A hosted REST-API ready to respond to your AJAX requests,No,Yes,https://reqres.in/ ,,,,,
+Scrape Website Email,Grabs email addresses from a URL,`X-Mashape-Key`,Yes,https://market.mashape.com/tommytcchan/scrape-website-email,,,,,
+SHOUTCLOUD,ALL-CAPS AS A SERVICE,No,No,http://shoutcloud.io/,,,,,
+Verse,Check what's the latest version of your favorite open-source project,No,Yes,https://verse.pawelad.xyz/,,,,,
+XML to JSON,Integration developer utility APIs,No,Yes,https://developers.wso2apistore.com/,,,,,
+Wordnik,Dictionary Data,No,No,http://developer.wordnik.com,,,,,
+File.io,File Sharing,No,Yes,https://www.file.io,,,,,
+pdflayer API,HTML/URL to PDF,No,Yes,https://pdflayer.com,,,,,
+UK Carbon Intensity,The Official Carbon Intensity API for Great Britain developed by National Grid,No,Yes,https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v1-0-0,,,,,
+IEX,Stocks and Market Data,No,Yes,https://iextrading.com/developer/,,,,,
+Razorpay IFSC,Indian Financial Systems Code (Bank Branch Codes),No,Yes,https://ifsc.razorpay.com/,,,,,
+RoutingNumbers.info,ACH/NACHA Bank Routing Numbers,No,Yes,https://www.routingnumbers.info/api/index.html,,,,,
+VAT Rates,A collection of all VAT rates for EU countries,No,Yes,https://jsonvat.com/,,,,,
+BigOven,Recipe Search,`X-Mashape-Key`,No,http://api2.bigoven.com/,,,,,
+Open Food Facts,Food Products Database,No,Yes,https://world.openfoodfacts.org/data,,,,,
+PunkAPI,Brewdog Beer Recipes,No,Yes,https://punkapi.com/,,,,,
+Recipe Puppy,Food,No,No,http://www.recipepuppy.com/about/api/,,,,,
+TacoFancy,Community-driven taco database,No,No,https://github.com/evz/tacofancy-api,,,,,
+The Report of the Week,Food & Drink Reviews,No,Yes,https://github.com/andyklimczak/TheReportOfTheWeek-API,,,,,
+Battlefield 4,Battlefield 4 Information,No,Yes,https://bf4stats.com/api,,,,,
+Chuck Norris Database,Jokes,No,No,http://www.icndb.com/api/,,,,,
+Clash of Clans,Clash of Clans Game Information,No,Yes,https://developer.clashofclans.com,,,,,
+Clash Royale,Clash Royale Game Information,No,Yes,https://github.com/martincarrera/clash-royale-api,,,,,
+Comic Vine,Comics,No,Yes,https://comicvine.gamespot.com/api/documentation,,,,,
+Deck of Cards,Deck of Cards,No,No,http://deckofcardsapi.com/,,,,,
+Dota 2,Provides information about Player stats , Match stats, Rankings for Dota 2,No,Yes,https://docs.opendota.com/,,,
+Games,Minecraft and other server info & user info),No,Yes,https://docs.gameapis.net/,,,,,
+Giant Bomb,Video Games,No,Yes,https://www.giantbomb.com/api/documentation,,,,,
+Hearthstone,Hearthstone Cards Information,`X-Mashape-Key`,Yes,http://hearthstoneapi.com/,,,,,
+Jokes,Programming and general jokes,No,Yes,https://github.com/15Dkatz/official_joke_api,,,,,
+Jservice,Jeopardy Question Database,No,No,http://jservice.io,,,,,
+Magic The Gathering,Magic The Gathering Game Information,No,No,http://magicthegathering.io/,,,,,
+Open Trivia,Trivia Questions,No,Yes,https://opentdb.com/api_config.php,,,,,
+Pokéapi,Pokémon Information,No,No,http://pokeapi.co,,,,,
+Qriusity,Quiz/Trivia Questions,No,Yes,https://qriusity.com/,,,,,
+xkcd,Retrieve xkcd comics as JSON,No,Yes,https://xkcd.com/json.html,,,,,
+adresse.data.gouv.fr,Address database of France, geocoding, and reverse,No,Yes,https://adresse.data.gouv.fr,,,
+CitySDK,Open APIs for select European cities,No,Yes,http://www.citysdk.eu/citysdk-toolkit/,,,,,
+FreeGeoIP,Geolocation of IP addresses,No,Yes,https://freegeoip.net/,,,,,
+GeoApi,French geographical data,No,Yes,https://api.gouv.fr/api/geoapi.html,,,,,
+Geocode.xyz,Provides worldwide forward/reverse geocoding, batch geocoding and geoparsing,No,Yes,https://geocode.xyz/,,,,
+GeoNames,Place names and other geographical data,No,No,http://www.geonames.org/export/web-services.html,,,,,
+GraphLoc,Free GraphQL IP Geolocation API,No,Yes,https://www.graphloc.com,,,,,
+IP 2 Country,Map an IP to a country,No,Yes,https://ip2country.info,,,,,
+IP Address Details,Find geolocation with ip address,No,Yes,https://ipinfo.io/,,,,,
+IP Location,Find IP address location information,No,Yes,https://ipapi.co/,,,,,
+IP Vigilante,Free IP Geolocation API,No,Yes,https://www.ipvigilante.com/,,,,,
+Mexico,Mexico RESTful zip codes API,No,Yes,https://github.com/IcaliaLabs/sepomex,,,,,
+OnWater,Determine if a lat/lon is on water or land,No,Yes,https://onwater.io/,,,,,
+OpenCage,Forward and reverse geocoding using open data,No,Yes,https://geocoder.opencagedata.com,,,,,
+PostcodeData.nl,Provide geolocation data based on postcode for Dutch addresses,No,No,http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&streetnumber=60&ref=domeinnaam.nl&type=json,,,,,
+Postcodes.io,Postcode lookup & Geolocation for the UK,No,Yes,https://postcodes.io,,,,,
+REST Countries,Get information about countries via a RESTful API,No,Yes,https://restcountries.eu,,,,,
+ViaCep,Brazil RESTful zip codes API,No,Yes,https://viacep.com.br,,,,,
+Zippopotam,Get information about place such as country, city, state, etc,No,No,http://www.zippopotam.us,,
+BCLaws,Access to the laws of British Columbia,No,No,http://www.bclaws.ca/civix/template/complete/api/index.html,,,,,
+Census.gov,The US Census Bureau provides various APIs and data sets on demographics and businesses,No,Yes,https://www.census.gov/data/developers/data-sets.html,,,,,
+EPA,Web services and data sets from the US Environmental Protection Agency,No,Yes,https://developer.epa.gov/category/api/,,,,,
+Food Standards Agency,UK food hygiene rating data API,No,No,http://ratings.food.gov.uk/open-data/en-GB,,,,,
+Diabetes,Logging and retrieving diabetes information,No,No,http://predictbgl.com/api/,,,,,
+Flutrack,Influenza-like symptoms with geotracking,No,No,http://www.flutrack.org/,,,,,
+Healthcare.gov,Educational content about the US Health Insurance Marketplace,No,Yes,https://www.healthcare.gov/developers/,,,,,
+Makeup,Makeup Information,No,No,http://makeup-api.herokuapp.com/,,,,,
+Medicare,Access to the data from the CMS - medicare.gov,No,Yes,https://data.medicare.gov/developers,,,,,
+NPPES,National Plan & Provider Enumeration System, info on healthcare providers registered in US,No,Yes,https://npiregistry.cms.hhs.gov/registry/help-api,,,,
+openFDA,Public FDA data about drugs, devices, and foods,No,Yes,https://open.fda.gov/api/,,,
+USDA Nutrients,National Nutrient Database for Standard Reference,No,Yes,https://ndb.nal.usda.gov/ndb/doc/index,,,,,
+Github Jobs,Jobs for software developers,No,Yes,https://jobs.github.com/api,,,,,
+Open Skills,Job titles, skills, and related jobs data,No,No,https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview,,,
+Search.gov Jobs,Tap into a list of current jobs openings with the United States government,No,Yes,https://search.gov/developer/jobs.html,,,,,
+Newton,Symbolic and Arithmetic Math Calculator,No,Yes,https://newton.now.sh/,,,,,
+Numbers API,Facts about numbers,No,No,http://numbersapi.com,,,,,
+Bandsintown,Music Events,No,Yes,https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0,,,,,
+iTunes Search,Software products,No,Yes,https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/,,,,,
+Lyrics.ovh,Simple API to retrieve the lyrics of a song,No,Yes,http://docs.lyricsovh.apiary.io/,,,,,
+MusicBrainz,Music,No,Yes,https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2,,,,,
+Songsterr,Provides guitar, bass and drums tabs and chords,No,Yes,https://www.songsterr.com/a/wa/api/,,,,
+Soundcloud,Music,No,Yes,https://developers.soundcloud.com/,,,,,
+Chronicling America,Provides access to millions of pages of historic US newspapers from the Library of Congress,No,No,http://chroniclingamerica.loc.gov/about/api/,,,,,
+18F,US Federal Government /Developer Program,No,No,http://18f.github.io/API-All-the-X/,,,,,
+Abbreviation,Get abbreviations and meanings,`X-Mashape-Key`,Yes,https://market.mashape.com/daxeel/abbreviations,,,,,
+Callook.info,United States ham radio callsigns,No,Yes,https://callook.info,,,,,
+Celebinfo,Celebrity information,`X-Mashape-Key`,Yes,https://market.mashape.com/daxeel/celebinfo/,,,,,
+Colorado Data Engine,Formatted and geolocated Colorado public data,No,Yes,http://codataengine.org/,,,,,
+Colorado Information Marketplace,Colorado State Government Open Data,No,Yes,https://data.colorado.gov/,,,,,
+Data USA,US Public Data,No,Yes,https://datausa.io/about/api/,,,,,
+Dronestream,Tracks United States drone strikes,No,Yes,https://dronestre.am/,,,,,
+Federal Register,The Daily Journal of the United States Government,No,Yes,https://www.federalregister.gov/reader-aids/developer-resources,,,,,
+fonoApi,Mobile Device Description,No,Yes,https://fonoapi.freshpixl.com/,,,,,
+French Address Search,French Government,No,Yes,https://adresse.data.gouv.fr/api,,,,,
+Microlink.io,Turns any link into information,No,Yes,https://docs.microlink.io,,,,,
+Open Government, Australia,Australian Government Open Data,No,Yes,https://www.data.gov.au/,,,,
+Open Government, Canada,Canadian Government Open Data,No,No,http://open.canada.ca/en,,,,
+Open Government, New Zealand,New Zealand Government Open Data,No,Yes,https://www.data.govt.nz/,,,,
+Open Government, Taiwan,Taiwan Government Open Data,No,Yes,https://data.gov.tw/,,,,
+Open Government, USA,United States Government Open Data,No,Yes,https://www.data.gov/,,,,
+Prague Opendata,Prague City Open Data,No,No,http://opendata.praha.eu/en,,,,,
+Quandl,Stock Market Data,No,Yes,https://www.quandl.com/,,,,,
+Represent by Open North,Find Canadian Government Representatives,No,Yes,https://represent.opennorth.ca/,,,,,
+Teleport,Quality of Life Data,No,Yes,https://developers.teleport.org/,,,,,
+Wikipedia,Mediawiki Encyclopedia,No,Yes,https://www.mediawiki.org/wiki/API:Main_page,,,,,
+Countly,Countly web analytics,No,No,http://resources.count.ly/docs,,,,,
+Drupal.org,Drupal.org,No,Yes,https://www.drupal.org/drupalorg/docs/api,,,,,
+USPTO,USA patent api services,No,Yes,https://www.uspto.gov/learning-and-resources/open-data-and-mobility,,,,,
+chucknorris.io,JSON API for hand curated Chuck Norris jokes,No,Yes,https://api.chucknorris.io,,,,,
+Forismatic,Inspirational Quotes,No,No,http://forismatic.com/en/api/,,,,,
+icanhazdadjoke,The largest selection of dad jokes on the internet,No,Yes,https://icanhazdadjoke.com/api,,,,,
+Quotes on Design,Inspirational Quotes,No,Yes,https://quotesondesign.com/api-v4-0/,,,,,
+Traitify,Assess, collect, and analyze Personality,No,Yes,https://app.traitify.com/developer,,,
+tronalddump.io,Api & web archive for the things Donald Trump has said,No,Yes,https://www.tronalddump.io,,,,,
+Pixhost,Upload images, photos, galleries,No,Yes,https://pixhost.org/api/index.html,,,
+PlaceKitten,Resizable kitten placeholder images,No,Yes,https://placekitten.com/,,,,,
+ScreenShotLayer,URL 2 Image,No,Yes,https://screenshotlayer.com,,,,,
+arcsecond.io,Multiple astronomy data sources,No,Yes,https://api.arcsecond.io/,,,,,
+inspirehep.net,High Energy Physics info. system,No,Yes,https://inspirehep.net/info/hep/api?ln=en,,,,,
+Launch Library,Upcoming Space Launches,No,Yes,https://launchlibrary.net/1.2/docs/api.html,,,,,
+Minor Planet Center,Asterank.com Information,No,No,http://www.asterank.com/mpc,,,,,
+NASA,NASA data, including imagery,No,Yes,https://api.nasa.gov,,,,
+Open Notify,ISS astronauts, current location, etc,No,No,http://open-notify.org/Open-Notify-API/,,,
+SpaceX,Company, vehicle, launchpad and launch data,No,Yes,https://github.com/r-spacex/SpaceX-API,,,
+Sunrise and Sunset,Sunset and sunrise times for a given latitude and longitude,No,Yes,https://sunrise-sunset.org/api,,,,,
+USGS Earthquake Hazards Program,Earthquakes data real-time,No,Yes,https://earthquake.usgs.gov/fdsnws/event/1/,,,,,
+USGS Water Services,Water quality and level info for rivers and lakes,No,Yes,https://waterservices.usgs.gov/,,,,,
+World Bank,World Data,No,No,https://datahelpdesk.worldbank.org/knowledgebase/topics/125589,,,,,
+AXFR Database,AXFR public database,No,No,http://api.axfrcheck.com,,,,,
+HaveIBeenPwned,Passwords which have previously been exposed in data breaches,No,Yes,https://haveibeenpwned.com/API/v2,,,,,
+UK Police,UK Police data,No,Yes,https://data.police.uk/docs/,,,,,
+DonReach Social Count,Get the social share count of a URL from every major social network,No,Yes,https://donreach.com/social-share-count/,,,,,
+Fuck Off as a Service,Asks someone to fuck off,No,Yes,https://www.foaas.com,,,,,
+HackerNews,Social news for CS and entrepreneurship,No,Yes,https://github.com/HackerNews/API,,,,,
+BikeWise,Bikewise is a place to learn about and report bike crashes, hazards, and thefts,No,Yes,https://www.bikewise.org/documentation/api_v2,,,
+Cartola FC,The Cartola FC API serves to check the partial points of your team,No,Yes,https://github.com/wgenial/cartrolandofc,,,,,
+City Bikes,City Bikes around the world,No,No,http://api.citybik.es/v2/,,,,,
+Cricket Live Scores,Live cricket scores,`X-Mashape-Key`,Yes,https://market.mashape.com/dev132/cricket-live-scores,,,,,
+Ergast F1,F1 data from the beginning of the world championships in 1950,No,No,http://ergast.com/mrd/,,,,,
+Football-Data.org,Football Data,No,No,http://api.football-data.org/index,,,,,
+NBA Stats,Current and historical NBA Statistics,No,Yes,https://any-api.com/nba_com/nba_com/docs/API_Description,,,,,
+NFL Arrests,NFL Arrest Data,No,No,http://nflarrest.com/api/,,,,,
+Pro Motocross,The RESTful AMA Pro Motocross lap times for every racer on the start gate,No,No,http://promotocrossapi.com,,,,,
 SuredBits,Query sports data, including teams, players, games, scores, and statistics,No,No,https://suredbits.com/api/
-UFC Data,Ultimate Fighting Championship information for events and fighters,No,No,http://ufc-data-api.ufc.com/
-Adorable Avatars,Generate random cartoon avatars,No,Yes,http://avatars.adorable.io
-Bacon Ipsum,A Meatier Lorem Ipsum Generator,No,Yes,https://baconipsum.com/json-api/
-FHIR,Fast Healthcare Interoperability Resources test data,No,Yes,http://fhirtest.uhn.ca/home
-Hipster Ipsum,Generates Hipster Ipsum text,No,No,http://hipsterjesus.com/
-JSONPlaceholder,Fake data for testing and prototyping,No,No,http://jsonplaceholder.typicode.com/
-Lorem Text,Generates Lorem Ipsum text,`X-Mashape-Key`,Yes,https://market.mashape.com/montanaflynn/lorem-text-generator
-Loripsum,The "lorem ipsum" generator that doesn't suck,No,No,http://loripsum.net/
-RandomUser,Generates random user data,No,Yes,https://randomuser.me
-RoboHash,Generate random robot/alien avatars,No,Yes,https://robohash.org/
-UI Names,Generate random fake names,No,Yes,https://github.com/thm/uinames
-Yes No,Generate yes or no randomly,No,Yes,https://yesno.wtf/api
-Postmon,An API to query Brazilian ZIP codes and orders easily, quickly and free,No,No,http://postmon.com.br
-ADS-B Exchange,Access real-time and historical data of any and all airbone aircraft,No,Yes,https://www.adsbexchange.com/data/
-Community Transit,Transitland API,No,Yes,https://github.com/transitland/transitland-datastore/blob/master/README.md#api-endpoints
-Icelandic APIs,Open APIs that deliver services in or regarding Iceland,No,Yes,http://docs.apis.is/
-REFUGE Restrooms,Provides safe restroom access for transgender, intersex, and gender nonconforming individuals,No,Yes,https://www.refugerestrooms.org/api/docs/#!/restrooms
-TransitLand,Transit Aggregation,No,Yes,https://transit.land/documentation/datastore/api-endpoints.html
-Transport for Atlanta, US,Marta,No,No,http://www.itsmarta.com/app-developer-resources.aspx
-Transport for Auckland, New Zealand,Auckland Transport,No,Yes,https://api.at.govt.nz/
-Transport for Belgium,Belgian transport API,No,Yes,https://hello.irail.be/api/
-Transport for Berlin, Germany,Third-party VBB API,No,Yes,https://github.com/derhuerst/vbb-rest/blob/master/docs/index.md
-Transport for Boston, US,MBTA API,No,No,http://realtime.mbta.com/Portal/Home/Documents
-Transport for Budapest, Hungary,Budapest public transport API,No,Yes,https://apiary.io/
-Transport for Chicago, US,CTA,No,No,http://www.transitchicago.com/developers/
-Transport for Czech Republic,Czech transport API,No,Yes,https://www.chaps.cz/eng/products/idos-internet
-Transport for Denver, US,RTD,No,No,http://www.rtd-denver.com/gtfs-developer-guide.shtml
-Transport for Finland,Finnish transport API,No,Yes,https://digitransit.fi/en/developers/ 
-Transport for London, England,TfL API,No,Yes,https://api.tfl.gov.uk
-Transport for Norway,Norwegian transport API,No,No,http://reisapi.ruter.no/help
-Transport for Ottawa, Canada,OC Transpo next bus arrival API,No,No,http://www.octranspo.com/index.php/developers
-Transport for Paris, France,RATP Open Data API,No,No,http://data.ratp.fr/api/v1/console/datasets/1.0/search/
-Transport for Paris, France,Live schedules made simple,No,No,http://restratpws.azurewebsites.net/swagger/
-Transport for Philadelphia, US,SEPTA APIs,No,No,http://www3.septa.org/hackathon/
-Transport for Rio de Janeiro, Brazil,Prefeitura do Rio (City Hall),No,No,http://data.rio/group/transporte-e-mobilidade
-Transport for Switzerland,Swiss public transport API,No,Yes,https://transport.opendata.ch/
-Transport for The Netherlands,OVAPI, country-wide public transport,No,Yes,https://github.com/skywave/KV78Turbo-OVAPI/wiki
-Transport for Toronto, Canada,TTC,No,Yes,https://myttc.ca/developers
-Transport for United States,NextBus API,No,No,http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
-Universities List,University names, countries and domains,No,Yes,https://github.com/Hipo/university-domains-list
-Brazilian Vehicles and Prices,Vehicles information from Fundação Instituto de Pesquisas Econômicas - Fipe,No,Yes,https://deividfortuna.github.io/fipe/
-NHTSA,NHTSA Product Information Catalog and Vehicle Listing,No,Yes,https://vpic.nhtsa.dot.gov/api/
-An API of Ice And Fire,Game Of Thrones API,No,Yes,https://anapioficeandfire.com/
-Czech Television,TV programme of Czech TV,No,No,http://www.ceskatelevize.cz/xml/tv-program/
-Netflix Roulette,Netflix database,No,Yes,https://netflixroulette.net/api/
-Ron Swanson Quotes,Television,No,Yes,https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api
-SWAPI,Star Wars Information,No,Yes,https://swapi.co
-TVMaze,TV Show Data,No,No,http://www.tvmaze.com/api
-Utelly,Check where a tv show or movie is available,`X-Mashape-Key`,Yes,https://market.mashape.com/utelly/utelly
-MetaWeather,Weather,No,Yes,https://www.metaweather.com/api/
-ODWeather,Weather and weather webcams,No,No,http://api.oceandrivers.com/static/docs.html
-Yahoo! Weather,Weather,No,Yes,https://developer.yahoo.com/weather/)# Public APIs [![Build Status](https://api.travis-ci.org/toddmotto/public-apis.svg)](https://travis-ci.org/toddmotto/public-apis
-A collective list of free APIs for use in web development.
-A JSON encoding of all entries can be found [here](json).
-For information on contributing to this project, please see the [contributing guide](.github/CONTRIBUTING.md).
-Please note a passing build status indicates all listed APIs are available since the last update. A failing build status indicates that 1 or more services may be unavailable at the moment.
-## Index
-* [Animals](#animals
-* [Anime](#anime
-* [Anti-Malware](#anti-malware
-* [Art & Design](#art--design
-* [Books](#books
-* [Business](#business
-* [Calendar](#calendar
-* [Cloud Storage & File Sharing](#cloud-storage--file-sharing
-* [Continuous Integration](#continuous-integration
-* [Cryptocurrency](#cryptocurrency
-* [Currency Exchange](#currency-exchange
-* [Data Validation](#data-validation
-* [Development](#development
-* [Dictionaries](#dictionaries
-* [Documents & Productivity](#documents--productivity
-* [Environment](#environment
-* [Events](#events
-* [Finance](#finance
-* [Food & Drink](#food--drink
-* [Fraud Prevention](#fraud-prevention
-* [Games & Comics](#games--comics
-* [Geocoding](#geocoding
-* [Government](#government
-* [Health](#health
-* [Jobs](#jobs
-* [Machine Learning](#machine-learning
-* [Math](#math
-* [Music](#music
-* [News](#news
-* [Open Data](#open-data
-* [Open Source Projects](#open-source-projects
-* [Patent](#patent
-* [Personality](#personality
-* [Photography](#photography
-* [Science](#science
-* [Security](#security
-* [Shopping](#shopping
-* [Social](#social
-* [Sports & Fitness](#sports--fitness
-* [Test Data](#test-data
-* [Text Analysis](#text-analysis
-* [Tracking](#tracking
-* [Transportation](#transportation
-* [University](#university
-* [URL Shorteners](#url-shorteners
-* [Vehicle](#vehicle
-* [Video](#video
-* [Weather](#weather
-Dogs,Based on the Stanford Dogs Dataset,No,Yes,https://dog.ceo/dog-api/
-HTTPCat,Cat for every HTTP Status,No,Yes,https://http.cat/
-Movebank,Movement and Migration data of animals,No,Yes,https://github.com/movebank/movebank-api-doc
-RescueGroups,Adoption,No,Yes,https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home
-Jikan,Unofficial MyAnimeList API,No,Yes,https://jikan.me
-Studio Ghibli,Resources from Studio Ghibli films,No,Yes,https://ghibliapi.herokuapp.com
-BookNomads,Books published in the Netherlands and Flanders (about 2.5 million), book covers, and related data,No,Yes,https://www.booknomads.com/dev
-British National Bibliography,Books,No,No,http://bnb.data.bl.uk/
-Open Library,Books, book covers, and related data,No,Yes,https://openlibrary.org/developers/api
-Clearbit Logo API,Search for company logos and embed them in your projects,No,Yes,https://clearbit.com/docs#logo-api
-Domainsdb.info,Registered Domain Names Search,No,Yes,https://domainsdb.info/
-markerapi,Trademark Search,No,No,http://www.markerapi.com/
-Church Calendar,Catholic liturgical calendar,No,No,http://calapi.inadiutorium.cz/
-Czech Namedays Calendar,Lookup for a name and returns nameday date,No,No,http://svatky.adresa.info/
-Hebrew Calendar,Convert between Gregarian and Hebrew, fetch Shabbat and Holiday times, etc,No,No,https://www.hebcal.com/home/developer-apis
-LectServe,Protestant liturgical calendar,No,No,http://www.lectserve.com
-Non-Working Days,Database of ICS files for non working days,No,Yes,https://github.com/gadael/icsdb
-Blockchain,Bitcoin Payment, Wallet & Transaction Data,No,Yes,https://www.blockchain.info/api
-CoinDesk,Bitcoin Price Index,No,No,http://www.coindesk.com/api/
-CoinMarketCap,Cryptocurrencies Prices,No,Yes,https://coinmarketcap.com/api/
-CryptoCompare,Cryptocurrencies Comparison,No,Yes,https://www.cryptocompare.com/api#
-Cryptonator,Cryptocurrencies Exchange Rates,No,Yes,https://www.cryptonator.com/api/
-MercadoBitcoin,Brazilian Cryptocurrency Information,No,Yes,https://www.mercadobitcoin.net/api-doc/
-Czech National Bank,A collection of exchange rates,No,Yes,https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.xml
-Fixer.io,Exchange rates and currency conversion,No,Yes,http://fixer.io
-languagelayer,Language detection,No,Yes,https://languagelayer.com
-mailboxlayer,Email address validation,No,Yes,https://mailboxlayer.com
-MailTest,Email address validation,No,Yes,http://mailtest.in/documentation/
-NumValidate,Open Source phone number validation,No,Yes,https://numvalidate.com
-numverify,Phone number validation,No,Yes,https://numverify.com
-PurgoMalum,Content validator against profanity & obscenity,No,No,http://www.purgomalum.com
-vatlayer,VAT number validation,No,Yes,https://vatlayer.com
-APIs.guru,Wikipedia for Web APIs, OpenAPI/Swagger specs for public APIs,No,Yes,https://apis.guru/api-doc/
-BetterMeta,Return a site's meta tags in JSON format,X-Mashape-Key,Yes,http://bettermeta.io
-Bitbucket,Pull public information for a Bitbucket account,No,Yes,https://api.bitbucket.org/2.0/users/karllhughes
-CDNJS,Library info on CDNJS,No,Yes,https://api.cdnjs.com/libraries/jquery
-Changelogs.md,Structured changelog metadata from open source projects,No,Yes,https://changelogs.md
-Count.io,Persistent counting and A/B testing,No,Yes,https://count.io
-DigitalOcean Status,Status of all DigitalOcean services,No,Yes,https://status.digitalocean.com/api/v1
-DomainDb Info,Domain name search to find all domains containing particular words/phrases/etc,No,Yes,https://domainsdb.info/apidomainsdb/index.php
-Genderize.io,Determines a gender from a first name,No,Yes,https://genderize.io
-Github,Information for a user's Github profile,No,Yes,https://developer.github.com/v3/
-HTTP2.Pro,Test endpoints for client and server HTTP/2 protocol support,No,Yes,https://http2.pro/doc/api
-IPify,A simple IP Address API,No,Yes,https://www.ipify.org/
-IPinfo,Another simple IP Address API,No,Yes,https://ipinfo.io/developers
-JSON 2 JSONP,Convert JSON to JSONP (on-the-fly) for easy cross-domain data requests using client-side JavaScript,No,Yes,https://json2jsonp.com/
-Judge0 API,Compile and run source code,No,Yes,https://api.judge0.com/
-Let's Validate,Uncovers the technologies used on websites and URL to thumbnail,No,Yes,https://github.com/letsvalidate/api
-Myjson,A simple JSON store for your web or mobile app,No,No,http://myjson.com/api
-Plino,Spam filtering system,No,Yes,https://plino.herokuapp.com/
-Public APIs,A collective list of free JSON APIs for use in web development,No,Yes,https://github.com/toddmotto/public-apis/tree/master/json
-QR code,Generate and decode / read QR code graphics,No,Yes,http://goqr.me/api/
-ReqRes,A hosted REST-API ready to respond to your AJAX requests,No,Yes,https://reqres.in/ 
-Scrape Website Email,Grabs email addresses from a URL,`X-Mashape-Key`,Yes,https://market.mashape.com/tommytcchan/scrape-website-email
-SHOUTCLOUD,ALL-CAPS AS A SERVICE,No,No,http://shoutcloud.io/
-Verse,Check what's the latest version of your favorite open-source project,No,Yes,https://verse.pawelad.xyz/
-XML to JSON,Integration developer utility APIs,No,Yes,https://developers.wso2apistore.com/
-Wordnik,Dictionary Data,No,No,http://developer.wordnik.com
-File.io,File Sharing,No,Yes,https://www.file.io
-pdflayer API,HTML/URL to PDF,No,Yes,https://pdflayer.com
-UK Carbon Intensity,The Official Carbon Intensity API for Great Britain developed by National Grid,No,Yes,https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v1-0-0
-IEX,Stocks and Market Data,No,Yes,https://iextrading.com/developer/
-Razorpay IFSC,Indian Financial Systems Code (Bank Branch Codes),No,Yes,https://ifsc.razorpay.com/
-RoutingNumbers.info,ACH/NACHA Bank Routing Numbers,No,Yes,https://www.routingnumbers.info/api/index.html
-VAT Rates,A collection of all VAT rates for EU countries,No,Yes,https://jsonvat.com/
-BigOven,Recipe Search,`X-Mashape-Key`,No,http://api2.bigoven.com/
-Open Food Facts,Food Products Database,No,Yes,https://world.openfoodfacts.org/data
-PunkAPI,Brewdog Beer Recipes,No,Yes,https://punkapi.com/
-Recipe Puppy,Food,No,No,http://www.recipepuppy.com/about/api/
-TacoFancy,Community-driven taco database,No,No,https://github.com/evz/tacofancy-api
-The Report of the Week,Food & Drink Reviews,No,Yes,https://github.com/andyklimczak/TheReportOfTheWeek-API
-Battlefield 4,Battlefield 4 Information,No,Yes,https://bf4stats.com/api
-Chuck Norris Database,Jokes,No,No,http://www.icndb.com/api/
-Clash of Clans,Clash of Clans Game Information,No,Yes,https://developer.clashofclans.com
-Clash Royale,Clash Royale Game Information,No,Yes,https://github.com/martincarrera/clash-royale-api
-Comic Vine,Comics,No,Yes,https://comicvine.gamespot.com/api/documentation
-Deck of Cards,Deck of Cards,No,No,http://deckofcardsapi.com/
-Dota 2,Provides information about Player stats , Match stats, Rankings for Dota 2,No,Yes,https://docs.opendota.com/
-Games,Minecraft and other server info & user info),No,Yes,https://docs.gameapis.net/
-Giant Bomb,Video Games,No,Yes,https://www.giantbomb.com/api/documentation
-Hearthstone,Hearthstone Cards Information,`X-Mashape-Key`,Yes,http://hearthstoneapi.com/
-Jokes,Programming and general jokes,No,Yes,https://github.com/15Dkatz/official_joke_api
-Jservice,Jeopardy Question Database,No,No,http://jservice.io
-Magic The Gathering,Magic The Gathering Game Information,No,No,http://magicthegathering.io/
-Open Trivia,Trivia Questions,No,Yes,https://opentdb.com/api_config.php
-Pokéapi,Pokémon Information,No,No,http://pokeapi.co
-Qriusity,Quiz/Trivia Questions,No,Yes,https://qriusity.com/
-xkcd,Retrieve xkcd comics as JSON,No,Yes,https://xkcd.com/json.html
-adresse.data.gouv.fr,Address database of France, geocoding, and reverse,No,Yes,https://adresse.data.gouv.fr
-CitySDK,Open APIs for select European cities,No,Yes,http://www.citysdk.eu/citysdk-toolkit/
-FreeGeoIP,Geolocation of IP addresses,No,Yes,https://freegeoip.net/
-GeoApi,French geographical data,No,Yes,https://api.gouv.fr/api/geoapi.html
-Geocode.xyz,Provides worldwide forward/reverse geocoding, batch geocoding and geoparsing,No,Yes,https://geocode.xyz/
-GeoNames,Place names and other geographical data,No,No,http://www.geonames.org/export/web-services.html
-GraphLoc,Free GraphQL IP Geolocation API,No,Yes,https://www.graphloc.com
-IP 2 Country,Map an IP to a country,No,Yes,https://ip2country.info
-IP Address Details,Find geolocation with ip address,No,Yes,https://ipinfo.io/
-IP Location,Find IP address location information,No,Yes,https://ipapi.co/
-IP Vigilante,Free IP Geolocation API,No,Yes,https://www.ipvigilante.com/
-Mexico,Mexico RESTful zip codes API,No,Yes,https://github.com/IcaliaLabs/sepomex
-OnWater,Determine if a lat/lon is on water or land,No,Yes,https://onwater.io/
-OpenCage,Forward and reverse geocoding using open data,No,Yes,https://geocoder.opencagedata.com
-PostcodeData.nl,Provide geolocation data based on postcode for Dutch addresses,No,No,http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&streetnumber=60&ref=domeinnaam.nl&type=json
-Postcodes.io,Postcode lookup & Geolocation for the UK,No,Yes,https://postcodes.io
-REST Countries,Get information about countries via a RESTful API,No,Yes,https://restcountries.eu
-ViaCep,Brazil RESTful zip codes API,No,Yes,https://viacep.com.br
-Zippopotam,Get information about place such as country, city, state, etc,No,No,http://www.zippopotam.us
-BCLaws,Access to the laws of British Columbia,No,No,http://www.bclaws.ca/civix/template/complete/api/index.html
-Census.gov,The US Census Bureau provides various APIs and data sets on demographics and businesses,No,Yes,https://www.census.gov/data/developers/data-sets.html
-EPA,Web services and data sets from the US Environmental Protection Agency,No,Yes,https://developer.epa.gov/category/api/
-Food Standards Agency,UK food hygiene rating data API,No,No,http://ratings.food.gov.uk/open-data/en-GB
-Diabetes,Logging and retrieving diabetes information,No,No,http://predictbgl.com/api/
-Flutrack,Influenza-like symptoms with geotracking,No,No,http://www.flutrack.org/
-Healthcare.gov,Educational content about the US Health Insurance Marketplace,No,Yes,https://www.healthcare.gov/developers/
-Makeup,Makeup Information,No,No,http://makeup-api.herokuapp.com/
-Medicare,Access to the data from the CMS - medicare.gov,No,Yes,https://data.medicare.gov/developers
-NPPES,National Plan & Provider Enumeration System, info on healthcare providers registered in US,No,Yes,https://npiregistry.cms.hhs.gov/registry/help-api
-openFDA,Public FDA data about drugs, devices, and foods,No,Yes,https://open.fda.gov/api/
-USDA Nutrients,National Nutrient Database for Standard Reference,No,Yes,https://ndb.nal.usda.gov/ndb/doc/index
-Github Jobs,Jobs for software developers,No,Yes,https://jobs.github.com/api
-Open Skills,Job titles, skills, and related jobs data,No,No,https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview
-Search.gov Jobs,Tap into a list of current jobs openings with the United States government,No,Yes,https://search.gov/developer/jobs.html
-Newton,Symbolic and Arithmetic Math Calculator,No,Yes,https://newton.now.sh/
-Numbers API,Facts about numbers,No,No,http://numbersapi.com
-Bandsintown,Music Events,No,Yes,https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0
-iTunes Search,Software products,No,Yes,https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/
-Lyrics.ovh,Simple API to retrieve the lyrics of a song,No,Yes,http://docs.lyricsovh.apiary.io/
-MusicBrainz,Music,No,Yes,https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2
-Songsterr,Provides guitar, bass and drums tabs and chords,No,Yes,https://www.songsterr.com/a/wa/api/
-Soundcloud,Music,No,Yes,https://developers.soundcloud.com/
-Chronicling America,Provides access to millions of pages of historic US newspapers from the Library of Congress,No,No,http://chroniclingamerica.loc.gov/about/api/
-18F,US Federal Government /Developer Program,No,No,http://18f.github.io/API-All-the-X/
-Abbreviation,Get abbreviations and meanings,`X-Mashape-Key`,Yes,https://market.mashape.com/daxeel/abbreviations
-Callook.info,United States ham radio callsigns,No,Yes,https://callook.info
-Celebinfo,Celebrity information,`X-Mashape-Key`,Yes,https://market.mashape.com/daxeel/celebinfo/
-Colorado Data Engine,Formatted and geolocated Colorado public data,No,Yes,http://codataengine.org/
-Colorado Information Marketplace,Colorado State Government Open Data,No,Yes,https://data.colorado.gov/
-Data USA,US Public Data,No,Yes,https://datausa.io/about/api/
-Dronestream,Tracks United States drone strikes,No,Yes,https://dronestre.am/
-Federal Register,The Daily Journal of the United States Government,No,Yes,https://www.federalregister.gov/reader-aids/developer-resources
-fonoApi,Mobile Device Description,No,Yes,https://fonoapi.freshpixl.com/
-French Address Search,French Government,No,Yes,https://adresse.data.gouv.fr/api
-Microlink.io,Turns any link into information,No,Yes,https://docs.microlink.io
-Open Government, Australia,Australian Government Open Data,No,Yes,https://www.data.gov.au/
-Open Government, Canada,Canadian Government Open Data,No,No,http://open.canada.ca/en
-Open Government, New Zealand,New Zealand Government Open Data,No,Yes,https://www.data.govt.nz/
-Open Government, Taiwan,Taiwan Government Open Data,No,Yes,https://data.gov.tw/
-Open Government, USA,United States Government Open Data,No,Yes,https://www.data.gov/
-Prague Opendata,Prague City Open Data,No,No,http://opendata.praha.eu/en
-Quandl,Stock Market Data,No,Yes,https://www.quandl.com/
-Represent by Open North,Find Canadian Government Representatives,No,Yes,https://represent.opennorth.ca/
-Teleport,Quality of Life Data,No,Yes,https://developers.teleport.org/
-Wikipedia,Mediawiki Encyclopedia,No,Yes,https://www.mediawiki.org/wiki/API:Main_page
-Countly,Countly web analytics,No,No,http://resources.count.ly/docs
-Drupal.org,Drupal.org,No,Yes,https://www.drupal.org/drupalorg/docs/api
-USPTO,USA patent api services,No,Yes,https://www.uspto.gov/learning-and-resources/open-data-and-mobility
-chucknorris.io,JSON API for hand curated Chuck Norris jokes,No,Yes,https://api.chucknorris.io
-Forismatic,Inspirational Quotes,No,No,http://forismatic.com/en/api/
-icanhazdadjoke,The largest selection of dad jokes on the internet,No,Yes,https://icanhazdadjoke.com/api
-Quotes on Design,Inspirational Quotes,No,Yes,https://quotesondesign.com/api-v4-0/
-Traitify,Assess, collect, and analyze Personality,No,Yes,https://app.traitify.com/developer
-tronalddump.io,Api & web archive for the things Donald Trump has said,No,Yes,https://www.tronalddump.io
-Pixhost,Upload images, photos, galleries,No,Yes,https://pixhost.org/api/index.html
-PlaceKitten,Resizable kitten placeholder images,No,Yes,https://placekitten.com/
-ScreenShotLayer,URL 2 Image,No,Yes,https://screenshotlayer.com
-arcsecond.io,Multiple astronomy data sources,No,Yes,https://api.arcsecond.io/
-inspirehep.net,High Energy Physics info. system,No,Yes,https://inspirehep.net/info/hep/api?ln=en
-Launch Library,Upcoming Space Launches,No,Yes,https://launchlibrary.net/1.2/docs/api.html
-Minor Planet Center,Asterank.com Information,No,No,http://www.asterank.com/mpc
-NASA,NASA data, including imagery,No,Yes,https://api.nasa.gov
-Open Notify,ISS astronauts, current location, etc,No,No,http://open-notify.org/Open-Notify-API/
-SpaceX,Company, vehicle, launchpad and launch data,No,Yes,https://github.com/r-spacex/SpaceX-API
-Sunrise and Sunset,Sunset and sunrise times for a given latitude and longitude,No,Yes,https://sunrise-sunset.org/api
-USGS Earthquake Hazards Program,Earthquakes data real-time,No,Yes,https://earthquake.usgs.gov/fdsnws/event/1/
-USGS Water Services,Water quality and level info for rivers and lakes,No,Yes,https://waterservices.usgs.gov/
-World Bank,World Data,No,No,https://datahelpdesk.worldbank.org/knowledgebase/topics/125589
-AXFR Database,AXFR public database,No,No,http://api.axfrcheck.com
-HaveIBeenPwned,Passwords which have previously been exposed in data breaches,No,Yes,https://haveibeenpwned.com/API/v2
-UK Police,UK Police data,No,Yes,https://data.police.uk/docs/
-DonReach Social Count,Get the social share count of a URL from every major social network,No,Yes,https://donreach.com/social-share-count/
-Fuck Off as a Service,Asks someone to fuck off,No,Yes,https://www.foaas.com
-HackerNews,Social news for CS and entrepreneurship,No,Yes,https://github.com/HackerNews/API
-BikeWise,Bikewise is a place to learn about and report bike crashes, hazards, and thefts,No,Yes,https://www.bikewise.org/documentation/api_v2
-Cartola FC,The Cartola FC API serves to check the partial points of your team,No,Yes,https://github.com/wgenial/cartrolandofc
-City Bikes,City Bikes around the world,No,No,http://api.citybik.es/v2/
-Cricket Live Scores,Live cricket scores,`X-Mashape-Key`,Yes,https://market.mashape.com/dev132/cricket-live-scores
-Ergast F1,F1 data from the beginning of the world championships in 1950,No,No,http://ergast.com/mrd/
-Football-Data.org,Football Data,No,No,http://api.football-data.org/index
-NBA Stats,Current and historical NBA Statistics,No,Yes,https://any-api.com/nba_com/nba_com/docs/API_Description
-NFL Arrests,NFL Arrest Data,No,No,http://nflarrest.com/api/
-Pro Motocross,The RESTful AMA Pro Motocross lap times for every racer on the start gate,No,No,http://promotocrossapi.com
-SuredBits,Query sports data, including teams, players, games, scores, and statistics,No,No,https://suredbits.com/api/
-UFC Data,Ultimate Fighting Championship information for events and fighters,No,No,http://ufc-data-api.ufc.com/
-Adorable Avatars,Generate random cartoon avatars,No,Yes,http://avatars.adorable.io
-Bacon Ipsum,A Meatier Lorem Ipsum Generator,No,Yes,https://baconipsum.com/json-api/
-FHIR,Fast Healthcare Interoperability Resources test data,No,Yes,http://fhirtest.uhn.ca/home
-Hipster Ipsum,Generates Hipster Ipsum text,No,No,http://hipsterjesus.com/
-JSONPlaceholder,Fake data for testing and prototyping,No,No,http://jsonplaceholder.typicode.com/
-Lorem Text,Generates Lorem Ipsum text,`X-Mashape-Key`,Yes,https://market.mashape.com/montanaflynn/lorem-text-generator
-Loripsum,The "lorem ipsum" generator that doesn't suck,No,No,http://loripsum.net/
-RandomUser,Generates random user data,No,Yes,https://randomuser.me
-RoboHash,Generate random robot/alien avatars,No,Yes,https://robohash.org/
-UI Names,Generate random fake names,No,Yes,https://github.com/thm/uinames
-Yes No,Generate yes or no randomly,No,Yes,https://yesno.wtf/api
-Postmon,An API to query Brazilian ZIP codes and orders easily, quickly and free,No,No,http://postmon.com.br
-ADS-B Exchange,Access real-time and historical data of any and all airbone aircraft,No,Yes,https://www.adsbexchange.com/data/
-Community Transit,Transitland API,No,Yes,https://github.com/transitland/transitland-datastore/blob/master/README.md#api-endpoints
-Icelandic APIs,Open APIs that deliver services in or regarding Iceland,No,Yes,http://docs.apis.is/
-REFUGE Restrooms,Provides safe restroom access for transgender, intersex, and gender nonconforming individuals,No,Yes,https://www.refugerestrooms.org/api/docs/#!/restrooms
-TransitLand,Transit Aggregation,No,Yes,https://transit.land/documentation/datastore/api-endpoints.html
-Transport for Atlanta, US,Marta,No,No,http://www.itsmarta.com/app-developer-resources.aspx
-Transport for Auckland, New Zealand,Auckland Transport,No,Yes,https://api.at.govt.nz/
-Transport for Belgium,Belgian transport API,No,Yes,https://hello.irail.be/api/
-Transport for Berlin, Germany,Third-party VBB API,No,Yes,https://github.com/derhuerst/vbb-rest/blob/master/docs/index.md
-Transport for Boston, US,MBTA API,No,No,http://realtime.mbta.com/Portal/Home/Documents
-Transport for Budapest, Hungary,Budapest public transport API,No,Yes,https://apiary.io/
-Transport for Chicago, US,CTA,No,No,http://www.transitchicago.com/developers/
-Transport for Czech Republic,Czech transport API,No,Yes,https://www.chaps.cz/eng/products/idos-internet
-Transport for Denver, US,RTD,No,No,http://www.rtd-denver.com/gtfs-developer-guide.shtml
-Transport for Finland,Finnish transport API,No,Yes,https://digitransit.fi/en/developers/ 
-Transport for London, England,TfL API,No,Yes,https://api.tfl.gov.uk
-Transport for Norway,Norwegian transport API,No,No,http://reisapi.ruter.no/help
-Transport for Ottawa, Canada,OC Transpo next bus arrival API,No,No,http://www.octranspo.com/index.php/developers
-Transport for Paris, France,RATP Open Data API,No,No,http://data.ratp.fr/api/v1/console/datasets/1.0/search/
-Transport for Paris, France,Live schedules made simple,No,No,http://restratpws.azurewebsites.net/swagger/
-Transport for Philadelphia, US,SEPTA APIs,No,No,http://www3.septa.org/hackathon/
-Transport for Rio de Janeiro, Brazil,Prefeitura do Rio (City Hall),No,No,http://data.rio/group/transporte-e-mobilidade
-Transport for Switzerland,Swiss public transport API,No,Yes,https://transport.opendata.ch/
-Transport for The Netherlands,OVAPI, country-wide public transport,No,Yes,https://github.com/skywave/KV78Turbo-OVAPI/wiki
-Transport for Toronto, Canada,TTC,No,Yes,https://myttc.ca/developers
-Transport for United States,NextBus API,No,No,http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
-Universities List,University names, countries and domains,No,Yes,https://github.com/Hipo/university-domains-list
-Brazilian Vehicles and Prices,Vehicles information from Fundação Instituto de Pesquisas Econômicas - Fipe,No,Yes,https://deividfortuna.github.io/fipe/
-NHTSA,NHTSA Product Information Catalog and Vehicle Listing,No,Yes,https://vpic.nhtsa.dot.gov/api/
-An API of Ice And Fire,Game Of Thrones API,No,Yes,https://anapioficeandfire.com/
-Czech Television,TV programme of Czech TV,No,No,http://www.ceskatelevize.cz/xml/tv-program/
-Netflix Roulette,Netflix database,No,Yes,https://netflixroulette.net/api/
-Ron Swanson Quotes,Television,No,Yes,https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api
-SWAPI,Star Wars Information,No,Yes,https://swapi.co
-TVMaze,TV Show Data,No,No,http://www.tvmaze.com/api
-Utelly,Check where a tv show or movie is available,`X-Mashape-Key`,Yes,https://market.mashape.com/utelly/utelly
-MetaWeather,Weather,No,Yes,https://www.metaweather.com/api/
-ODWeather,Weather and weather webcams,No,No,http://api.oceandrivers.com/static/docs.html
-Yahoo! Weather,Weather,No,Yes,https://developer.yahoo.com/weather/
+UFC Data,Ultimate Fighting Championship information for events and fighters,No,No,http://ufc-data-api.ufc.com/,,,,,
+Adorable Avatars,Generate random cartoon avatars,No,Yes,http://avatars.adorable.io,,,,,
+Bacon Ipsum,A Meatier Lorem Ipsum Generator,No,Yes,https://baconipsum.com/json-api/,,,,,
+FHIR,Fast Healthcare Interoperability Resources test data,No,Yes,http://fhirtest.uhn.ca/home,,,,,
+Hipster Ipsum,Generates Hipster Ipsum text,No,No,http://hipsterjesus.com/,,,,,
+JSONPlaceholder,Fake data for testing and prototyping,No,No,http://jsonplaceholder.typicode.com/,,,,,
+Lorem Text,Generates Lorem Ipsum text,`X-Mashape-Key`,Yes,https://market.mashape.com/montanaflynn/lorem-text-generator,,,,,
+Loripsum,"The ""lorem ipsum"" generator that doesn't suck",No,No,http://loripsum.net/,,,,,
+RandomUser,Generates random user data,No,Yes,https://randomuser.me,,,,,
+RoboHash,Generate random robot/alien avatars,No,Yes,https://robohash.org/,,,,,
+UI Names,Generate random fake names,No,Yes,https://github.com/thm/uinames,,,,,
+Yes No,Generate yes or no randomly,No,Yes,https://yesno.wtf/api,,,,,
+Postmon,An API to query Brazilian ZIP codes and orders easily, quickly and free,No,No,http://postmon.com.br,,,,
+ADS-B Exchange,Access real-time and historical data of any and all airbone aircraft,No,Yes,https://www.adsbexchange.com/data/,,,,,
+Community Transit,Transitland API,No,Yes,https://github.com/transitland/transitland-datastore/blob/master/README.md#api-endpoints,,,,,
+Icelandic APIs,Open APIs that deliver services in or regarding Iceland,No,Yes,http://docs.apis.is/,,,,,
+REFUGE Restrooms,Provides safe restroom access for transgender, intersex, and gender nonconforming individuals,No,Yes,https://www.refugerestrooms.org/api/docs/#!/restrooms,,,
+TransitLand,Transit Aggregation,No,Yes,https://transit.land/documentation/datastore/api-endpoints.html,,,,,
+Transport for Atlanta, US,Marta,No,No,http://www.itsmarta.com/app-developer-resources.aspx,,,,
+Transport for Auckland, New Zealand,Auckland Transport,No,Yes,https://api.at.govt.nz/,,,,
+Transport for Belgium,Belgian transport API,No,Yes,https://hello.irail.be/api/,,,,,
+Transport for Berlin, Germany,Third-party VBB API,No,Yes,https://github.com/derhuerst/vbb-rest/blob/master/docs/index.md,,,,
+Transport for Boston, US,MBTA API,No,No,http://realtime.mbta.com/Portal/Home/Documents,,,,
+Transport for Budapest, Hungary,Budapest public transport API,No,Yes,https://apiary.io/,,,,
+Transport for Chicago, US,CTA,No,No,http://www.transitchicago.com/developers/,,,,
+Transport for Czech Republic,Czech transport API,No,Yes,https://www.chaps.cz/eng/products/idos-internet,,,,,
+Transport for Denver, US,RTD,No,No,http://www.rtd-denver.com/gtfs-developer-guide.shtml,,,,
+Transport for Finland,Finnish transport API,No,Yes,https://digitransit.fi/en/developers/ ,,,,,
+Transport for London, England,TfL API,No,Yes,https://api.tfl.gov.uk,,,,
+Transport for Norway,Norwegian transport API,No,No,http://reisapi.ruter.no/help,,,,,
+Transport for Ottawa, Canada,OC Transpo next bus arrival API,No,No,http://www.octranspo.com/index.php/developers,,,,
+Transport for Paris, France,RATP Open Data API,No,No,http://data.ratp.fr/api/v1/console/datasets/1.0/search/,,,,
+Transport for Paris, France,Live schedules made simple,No,No,http://restratpws.azurewebsites.net/swagger/,,,,
+Transport for Philadelphia, US,SEPTA APIs,No,No,http://www3.septa.org/hackathon/,,,,
+Transport for Rio de Janeiro, Brazil,Prefeitura do Rio (City Hall),No,No,http://data.rio/group/transporte-e-mobilidade,,,,
+Transport for Switzerland,Swiss public transport API,No,Yes,https://transport.opendata.ch/,,,,,
+Transport for The Netherlands,OVAPI, country-wide public transport,No,Yes,https://github.com/skywave/KV78Turbo-OVAPI/wiki,,,,
+Transport for Toronto, Canada,TTC,No,Yes,https://myttc.ca/developers,,,,
+Transport for United States,NextBus API,No,No,http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf,,,,,
+Universities List,University names, countries and domains,No,Yes,https://github.com/Hipo/university-domains-list,,,,
+Brazilian Vehicles and Prices,Vehicles information from Fundação Instituto de Pesquisas Econômicas - Fipe,No,Yes,https://deividfortuna.github.io/fipe/,,,,,
+NHTSA,NHTSA Product Information Catalog and Vehicle Listing,No,Yes,https://vpic.nhtsa.dot.gov/api/,,,,,
+An API of Ice And Fire,Game Of Thrones API,No,Yes,https://anapioficeandfire.com/,,,,,
+Czech Television,TV programme of Czech TV,No,No,http://www.ceskatelevize.cz/xml/tv-program/,,,,,
+Netflix Roulette,Netflix database,No,Yes,https://netflixroulette.net/api/,,,,,
+Ron Swanson Quotes,Television,No,Yes,https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api,,,,,
+SWAPI,Star Wars Information,No,Yes,https://swapi.co,,,,,
+TVMaze,TV Show Data,No,No,http://www.tvmaze.com/api,,,,,
+Utelly,Check where a tv show or movie is available,`X-Mashape-Key`,Yes,https://market.mashape.com/utelly/utelly,,,,,
+MetaWeather,Weather,No,Yes,https://www.metaweather.com/api/,,,,,
+ODWeather,Weather and weather webcams,No,No,http://api.oceandrivers.com/static/docs.html,,,,,
+Yahoo! Weather,Weather,No,Yes,https://developer.yahoo.com/weather/)# Public APIs [![Build Status](https://api.travis-ci.org/toddmotto/public-apis.svg)](https://travis-ci.org/toddmotto/public-apis,,,,,
