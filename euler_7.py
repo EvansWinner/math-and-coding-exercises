@@ -1,18 +1,24 @@
 import sys
 
 nth = int(sys.argv[1])
-ps = [2, 3]
-len_ps = 2
-n = 5
-while len_ps <= nth:
-    for i in ps[1:]:
-        if i < (n ** 0.5) and n / i == n // i:
-            ps.append(n)
-            len_ps += 1
-            print('i: ', i, 'ps: ', ps, 'len_ps', len_ps, 'n: ', n)
-        n += 2
-    n = 5
-print(ps[-1])
+primes = [2]
+len_primes = 1
+to_check = 3
 
+def primes():
+  while True:
+    flag = True
+    for checker in primes:
+      print(checker, to_check ** 0.5)
+      if checker <= to_check ** 0.5:
+        if to_check // checker == to_check / checker:
+          flag = False # it's not prime
+      if flag:
+        primes.append(to_check)
+        len_primes += 1
+        print('Prime #', len_primes, ' is: ', primes[-1])
+    to_check += 1
+    if len_primes >= nth: break  
 
-
+if __name__ == '__main__':
+  primes()
