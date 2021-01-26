@@ -1,5 +1,5 @@
 # Rosetta Code Happy Numbers.
-# Print first 10 happy numbers in base 10
+# Print first 8 happy numbers in base 10
 
 def isHappy(i,priors):
   if i==1:return True
