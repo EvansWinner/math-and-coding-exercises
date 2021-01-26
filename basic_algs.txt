@@ -1,0 +1,23 @@
+Todo:
+
+Selection sort
+Binary search
+Linear search
+Breadth-first search of binary tree
+Depth-first search of binary tree
+Quicksort
+Radix sort
+Insertion sort
+Merge sort
+Bucket sort
+Anagram check for two strings
+Check if two strings are rotation on another
+Sieve of Eratosthenes
+Heap Sort
+Counting sort
+Hash
+Exponentiation by squaring
+KMP Algorhithm
+Euler's Totient function
+Counting inversions
+Prime factorization
