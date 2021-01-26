@@ -2,6 +2,10 @@
 # It's doing more passes or checks than it needs to.
 # Not sure why... but to hell with it. It works.
 
+# Now looking at how it's supposed to be done, the 
+# whole thing with the flags to say when we are done
+# appears to be unnecessary.
+
 def bub(lst):
   if len(lst)<2:return lst
   sorted_flag=False
