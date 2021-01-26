@@ -1,3 +1,6 @@
+# Rosetta Code Happy Numbers.
+# Print first 10 happy numbers in base 10
+
 def isHappy(i,priors):
   if i==1:return True
   nxt=sum(map(lambda x:int(x)**2,str(i)))
