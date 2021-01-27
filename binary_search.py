@@ -5,11 +5,12 @@ def bs(x,xs):
   done=False
   while not found and not done:
     candidate=(end-beg)//2
-    if x==xs[candidate]:return candidate
-    elif:
-      x < xs[candidate]:
-      end=candidate
-    el
+    if x==xs[candidate]:
+      return candidate
+    elif x < xs[candidate]:
+        end=candidate
+    else:
+      beg=candidate
 assert bs(4,[1,2,3,4,5])==3
 assert bs(5,[])==None
 assert bs(5,[5])==0
