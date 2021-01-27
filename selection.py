@@ -1,14 +1,12 @@
 # Selection sort
 def sel(lst):
   if len(lst)<2:return lst
-  ptr=0
   for pos in range(len(lst)):
-    m=lst[0]
-    for i,elt in enumerate(lst): #'m' for min
-      if elt<m:m=elt;idx=i
-    tmp=ptr;ptr=i;i=tmp;idx+=1
+    m=pos
+    for i in range(pos,len(lst)):
+      if lst[i]<lst[m]:m=i
+    if lst[m]<lst[pos]:tmp=lst[pos];lst[pos]=lst[m];lst[m]=tmp
   return lst
-print(sel([3,1,4,2,5]))
 assert sel([3,1,4,2,5])==[1,2,3,4,5]
 assert sel([])==[]
 assert sel([3])==[3]
