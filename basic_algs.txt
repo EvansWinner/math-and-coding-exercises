@@ -1,6 +1,5 @@
 Todo:
 
-Selection sort
 Binary search
 Linear search
 Breadth-first search of binary tree
