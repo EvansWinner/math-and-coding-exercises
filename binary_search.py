@@ -9,7 +9,7 @@ def bs(x,xs):
     if end-beg<=1:return None
 
 def test_1():
-  assert bs(9,[2,4,4,5,6,6,8,9,10,12,12,12,14])==7, 'Should be 7.'
+  assert bs(9,[2,4,4,5,6,6,8,9,10,12,12,12,14])==7
 def test_2():
   assert bs(4,[1,2,3,4,5])==3
 def test_empty():
