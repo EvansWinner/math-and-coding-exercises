@@ -2,7 +2,6 @@ def bs(x,xs):
   if xs==[]:return None
   beg=0;end=len(xs)
   while True:
-    print(beg,end)
     candidate=beg+((end-beg)//2)
     if x==xs[candidate]:return candidate
     elif x<xs[candidate]:end=candidate
