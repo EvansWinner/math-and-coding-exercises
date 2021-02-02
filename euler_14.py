@@ -1,3 +1,7 @@
+# Yeah, I get that I could memoize the results and find
+# some fiddly way to add them to the current results and 
+# have tons of off-by-one problems and all therest.
+# But meh. Who cares?
 def collatz(n):
   if n//2==n/2:return n/2
   return 3*n+1
