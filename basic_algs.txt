@@ -1,7 +1,5 @@
 Todo:
 
-Binary search
-Linear search
 Breadth-first search of binary tree
 Depth-first search of binary tree
 Quicksort
@@ -17,6 +15,5 @@ Counting sort
 Hash
 Exponentiation by squaring
 KMP Algorhithm
-Euler's Totient function
 Counting inversions
 Prime factorization
