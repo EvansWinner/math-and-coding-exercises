@@ -1,8 +1,12 @@
 from time import sleep
-from random import randint
+from random import randint, random
 
-DELAY = 0.4
-TRIPS = 5
+
+DELAY = 0.3
+NUM_PEOPLE = 100
+NUM_FLOORS = 100
+
+
 class Elevator:
 
   current_floor=1
@@ -66,21 +70,47 @@ class Elevator:
     self.set_floor(floor)
 
 
+
+class Person:
+  current_floor=1
+  destination=10
+
+   
+  def __init__(self,ident,current_floor):
+    self.ident=ident
+    self.current_floor=current_floor
+    print('Person',id, 'entering building.')
+
+
+
+class Building:
+  num_elevators=4
+  max_floor=10
+  elevator_list = []
+
+  def __init__(self,max_floor,min_floor,num_elevators):
+    self.max_floor=max_floor
+    self.min_floor=min_floor
+    self.num_elevators = num_elevators
+    for elevator in range(1,num_elevators+1):
+      elevator_list.append(Elevator('Elevator'+str(elevator),1,-5,10))
+     
+
+
 if __name__ == '__main__':
-  e1=Elevator('Elevator 1',1,-5,10)
-  e2=Elevator('Elevator 2',10,-5,10)
-  e3=Elevator('Elevator 3',2,-5,10)
-  e4=Elevator('Elevator 4',1,-5,10)
+  queue = []
+  for person in range(1,NUM_PEOPLE+1):
+    queue.append(Person(person, randint(1, NUM_FLOORS+1))
+  for person in queue:
+    queue.append 
 
-  do_list=[]
-  elevator_list=[e1, e2, e3, e4]
-
-  while TRIPS > 0:
-    TRIPS -= 1 
     elevator = randint(0,len(elevator_list) - 1)
     destination = randint(elevator_list[elevator].min_floor, elevator_list[elevator].max_floor)
+    if elevator_list[elevator].get_floor() != 1:
+      if random() < RETURN_TO_1_PROPORTION:
+        destination = 1  
     if destination == 0:
-      TRIPS += 1
+      TRIPS += 1; continue # Easier than trying to make the math work out
     elevator_list[elevator].goto(destination)
     
 
