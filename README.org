@@ -1,27 +1,6 @@
-* Exercises
-
-** Note: There is very little here yet
-
-This is a record of my progress toward my goal of teaching myself the
-rudiments of mathematics, algorithmics and something of computer
-programming.  Having completed only the first year or so of
-high-school Algebra and two college courses in basic symbolic logic, I
-intend to learn a) basic “pre-calculus” and trigonometry, the
-equivalent of a first-year college course in the integral and
-differential calculous, the basics of symbolic and mathematical logic,
-the basics of discrete mathematics (graphs, matrix algebra,
-categories) and the basics of algorithmics, data structures and
-programming language semantics (type theory, et cetera).
-
- - There is not much organization here;
- - there are some things that were done quickly without any notion of
-   being systematic, so there are some more or less random bits here
-   and there.
- - there is not much here -- I’ve really only just begun and may or
-   may not make much progress.
-
-** Bookmarks
-
- - ada-95-tutorial: http://www.infres.enst.fr/~pautet/Ada95/chap03.htm
-   ==> next=wahtever is first in chapter
- - interview-questions: next=1 (did 2 already)
+Mostly coding exercises and puzzles which I take out of context 
+(that is, I don't necessarily solve them in the language the 
+person who posed the problem says to use and sometimes I cheat
+by using a language where the solution is trivial). This is mainly
+an excuse to learn new and interesting languages, learn some
+mathematics, have fun, and play around with things.
