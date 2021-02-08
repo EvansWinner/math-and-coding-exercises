@@ -1,6 +1,6 @@
 .apl.history
 debug.log
 __pycache__/
-.hi
-.o
+*.hi
+*.o
 
