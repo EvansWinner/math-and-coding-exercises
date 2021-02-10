@@ -11,4 +11,4 @@ def run_len(s:str)->List[RunLen]:return rl(s,[],s[0],0)
 def test_run_len_orig_test():assert run_len('aaaabbbcca')==[('a',4),('b',3),('c',2),('a',1)]
 def test_run_len_ends_with_multuple():assert run_len('aaaabbbccaa')==[('a',4),('b',3),('c',2),('a',2)]
 print(run_len('aaaabbbcca')) # Original Programming Praxis test case
-print(run_len('aaaabbbccaa')) # Test case with double training characters
+print(run_len('aaaabbbccaa')) # Test case with double trailing characters
