@@ -1,6 +1,21 @@
 # Really quick solution for Project Rosalind problem "GC"
 # Terrible form, really.
+
+# Requires data file from the problem in path below. The data are:
+
+#>Rosalind_6404
+#CCTGCGGAAGATCGGCACTAGAATAGCCAGAACCGTTTCTCTGAGGCTTCCGGCCTTCCC
+#TCCCACTAATAATTCTGAGG
+#>Rosalind_5959
+#CCATCGGTAGCGCATCCTTAGTCCAATTAAGTCCCTATCCAGGCGCTCCGCCGAAGGTCT
+#ATATCCATTTGTCAGCAGACACGC
+#>Rosalind_0808
+#CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGAC
+#TGGGAACCTGCGGGCAGTAGGTGGAAT
+
 DATA_FILE = '/home/t/h/math-and-coding-exercises/rosalind_gc.dat'
+
+
 LINES = {}
 def gc(s:str)->float:
   gc=0
