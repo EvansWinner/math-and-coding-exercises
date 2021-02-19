@@ -18,5 +18,6 @@ def test_lmax_praxis_test_case():
   assert lmax([1,2,1,2,3,4,3,2,3,2,1])==[2,4,3]
 def test_lmax_beginning():
   assert lmax([4,2,2,3,4,5])==[4,5]
-
+def test_lmax_odd_n():
+  assert lmax([0,-3,5,3,6,3,2,-1,0,0])==[0,5,6,0]
 
